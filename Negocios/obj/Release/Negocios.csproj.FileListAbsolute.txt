@@ -1,0 +1,66 @@
+K:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+K:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+K:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+K:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+K:\Programacion\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+K:\Programacion\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+K:\Programacion\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+I:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+I:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+I:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+I:\Programacion\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+I:\Programacion\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+I:\Programacion\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+I:\Programacion\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+F:\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+F:\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+F:\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+F:\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+F:\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+F:\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+F:\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+F:\GYM FAROS\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+F:\GYM FAROS\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+F:\GYM FAROS\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+F:\GYM FAROS\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+F:\GYM FAROS\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+F:\GYM FAROS\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+F:\GYM FAROS\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+F:\raiz\GymSisV1_old_new\Negocios\bin\Release\Negocios.dll
+F:\raiz\GymSisV1_old_new\Negocios\bin\Release\Negocios.pdb
+F:\raiz\GymSisV1_old_new\Negocios\bin\Release\Datos.dll
+F:\raiz\GymSisV1_old_new\Negocios\bin\Release\Datos.pdb
+F:\raiz\GymSisV1_old_new\Negocios\obj\Release\Negocios.csprojResolveAssemblyReference.cache
+F:\raiz\GymSisV1_old_new\Negocios\obj\Release\Negocios.dll
+F:\raiz\GymSisV1_old_new\Negocios\obj\Release\Negocios.pdb
+C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Release\Negocios.dll
+C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Release\Negocios.pdb
+C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Release\Datos.dll
+C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Release\Datos.pdb
+C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Release\Datos.dll.config
+C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Release\Negocios.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Release\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Release\Negocios.csproj.CopyComplete
+C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Release\Negocios.dll
+C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Release\Negocios.pdb

@@ -1,0 +1,6 @@
+C:\Users\hp\source\repos\SistemaGym\Entidades\bin\Debug\Entidades.dll
+C:\Users\hp\source\repos\SistemaGym\Entidades\bin\Debug\Entidades.pdb
+C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.dll
+C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.pdb

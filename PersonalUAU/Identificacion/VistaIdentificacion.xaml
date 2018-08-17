@@ -1,0 +1,39 @@
+﻿<Window x:Class="PersonalUAU.Identificacion.VistaIdentificacion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Verificar Huella" Height="502.985" Width="876.119" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid>
+        <Image gif:ImageBehavior.AnimatedSource="/PersonalUAU;component/img/0.gif" Width="253" HorizontalAlignment="Right" Margin="0,199,-19,10"/>
+        <Grid Margin="0">
+
+            <GroupBox Header="Verificacion de Huella"
+  Style="{DynamicResource MaterialDesignCardGroupBox}"
+  Margin="16,16,212,48">
+                <GroupBox.HeaderTemplate>
+                    <DataTemplate>
+                        <StackPanel
+        Orientation="Horizontal">
+
+                            <TextBlock
+          Margin="8,0,0,0"
+          VerticalAlignment="Center"
+          Style="{StaticResource MaterialDesignSubheadingTextBlock}"
+          Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </GroupBox.HeaderTemplate>
+                <Grid Margin="10">
+                    <Label x:Name="lblMensaje" Content="Coloque su dedo en el checador...." Margin="10" FontSize="36"/>
+                    <Label x:Name="lblNombre" Content="" Margin="20 80 20 200" FontSize="30" HorizontalContentAlignment="Center" Foreground="{DynamicResource AccentColorBrush}"/>
+                    <Label x:Name="lblMembresia" Content="" Margin="20 140 20 140" FontSize="30" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="lbl_inicio" Content="" Margin="20,200,306,70" FontSize="24" HorizontalContentAlignment="Center" Foreground="{DynamicResource AccentColorBrush}"/>
+                    <Label x:Name="lbl_fin" Content="" Margin="314,200,20,70" FontSize="24" HorizontalContentAlignment="Center" Foreground="{DynamicResource AccentColorBrush}"/>
+                    <Label x:Name="lbl_resto" Content="" Margin="10,270,10,0" FontSize="24" HorizontalContentAlignment="Center"/>
+                </Grid>
+            </GroupBox>
+            <Label x:Name="lblHora" Content="00:00:00" HorizontalAlignment="Left" Margin="689,53,0,0" VerticalAlignment="Top" Height="76" Width="169" FontSize="36" FontWeight="Bold"/>
+        </Grid>
+    </Grid>
+</Window>

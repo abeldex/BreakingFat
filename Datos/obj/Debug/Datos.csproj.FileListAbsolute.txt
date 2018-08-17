@@ -1,0 +1,65 @@
+c:\Users\Yo\documents\visual studio 2012\Projects\GymSisV1\Datos\bin\Debug\Datos.dll.config
+c:\Users\Yo\documents\visual studio 2012\Projects\GymSisV1\Datos\bin\Debug\Datos.dll
+c:\Users\Yo\documents\visual studio 2012\Projects\GymSisV1\Datos\bin\Debug\Datos.pdb
+c:\Users\Yo\documents\visual studio 2012\Projects\GymSisV1\Datos\obj\Debug\Datos.dll
+c:\Users\Yo\documents\visual studio 2012\Projects\GymSisV1\Datos\obj\Debug\Datos.pdb
+C:\Users\Yo\Documents\Visual Studio 2012\Projects\GymSisV1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+I:\GymSisV1\Datos\bin\Debug\Datos.dll.config
+I:\GymSisV1\Datos\bin\Debug\Datos.dll
+I:\GymSisV1\Datos\bin\Debug\Datos.pdb
+I:\GymSisV1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+I:\GymSisV1\Datos\obj\Debug\Datos.dll
+I:\GymSisV1\Datos\obj\Debug\Datos.pdb
+C:\Users\Mario Navarro\Desktop\GymSisV1\Datos\bin\Debug\Datos.dll.config
+C:\Users\Mario Navarro\Desktop\GymSisV1\Datos\bin\Debug\Datos.dll
+C:\Users\Mario Navarro\Desktop\GymSisV1\Datos\bin\Debug\Datos.pdb
+C:\Users\Mario Navarro\Desktop\GymSisV1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Mario Navarro\Desktop\GymSisV1\Datos\obj\Debug\Datos.dll
+C:\Users\Mario Navarro\Desktop\GymSisV1\Datos\obj\Debug\Datos.pdb
+C:\Users\Yo\Music\GymSisV1\Datos\bin\Debug\Datos.dll.config
+C:\Users\Yo\Music\GymSisV1\Datos\bin\Debug\Datos.dll
+C:\Users\Yo\Music\GymSisV1\Datos\bin\Debug\Datos.pdb
+C:\Users\Yo\Music\GymSisV1\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Yo\Music\GymSisV1\Datos\obj\Debug\Datos.dll
+C:\Users\Yo\Music\GymSisV1\Datos\obj\Debug\Datos.pdb
+C:\Users\Yo\Music\GymSisV1_old\Datos\bin\Debug\Datos.dll.config
+C:\Users\Yo\Music\GymSisV1_old\Datos\bin\Debug\Datos.dll
+C:\Users\Yo\Music\GymSisV1_old\Datos\bin\Debug\Datos.pdb
+C:\Users\Yo\Music\GymSisV1_old\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Yo\Music\GymSisV1_old\Datos\obj\Debug\Datos.dll
+C:\Users\Yo\Music\GymSisV1_old\Datos\obj\Debug\Datos.pdb
+I:\GymSisV1_old\Datos\bin\Debug\Datos.dll.config
+I:\GymSisV1_old\Datos\bin\Debug\Datos.dll
+I:\GymSisV1_old\Datos\bin\Debug\Datos.pdb
+I:\GymSisV1_old\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+I:\GymSisV1_old\Datos\obj\Debug\Datos.dll
+I:\GymSisV1_old\Datos\obj\Debug\Datos.pdb
+F:\GymSisV1_old\Datos\bin\Debug\Datos.dll.config
+F:\GymSisV1_old\Datos\bin\Debug\Datos.dll
+F:\GymSisV1_old\Datos\bin\Debug\Datos.pdb
+F:\GymSisV1_old\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+F:\GymSisV1_old\Datos\obj\Debug\Datos.dll
+F:\GymSisV1_old\Datos\obj\Debug\Datos.pdb
+H:\GymSisV1_old_new\Datos\bin\Debug\Datos.dll.config
+H:\GymSisV1_old_new\Datos\bin\Debug\Datos.dll
+H:\GymSisV1_old_new\Datos\bin\Debug\Datos.pdb
+H:\GymSisV1_old_new\Datos\obj\Debug\Datos.csprojResolveAssemblyReference.cache
+H:\GymSisV1_old_new\Datos\obj\Debug\Datos.dll
+H:\GymSisV1_old_new\Datos\obj\Debug\Datos.pdb
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\bin\Debug\Datos.dll.config
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\bin\Debug\Datos.dll
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\bin\Debug\Datos.pdb
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\obj\Debug\Datos.dll
+C:\Users\Tutorias\source\repos\GymSisWpf\Datos\obj\Debug\Datos.pdb
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Datos.dll.config
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Datos.dll
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Datos.pdb
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.dll
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.pdb
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Entidades.dll
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Entidades.pdb
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.csproj.CopyComplete

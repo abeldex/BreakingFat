@@ -1,0 +1,117 @@
+﻿<Window x:Class="SistemaGym.AdministracionMembresias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGym"
+       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Administracion de Membresias" Height="667.2" Width="899.345" WindowStyle="None" WindowStartupLocation="CenterScreen" >
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}">
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                <Setter Property="Margin" Value="0 8 0 8" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <!--ESTA ES LA CABECERA -->
+        <materialDesign:ColorZone Padding="20" materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                            Mode="Dark" DockPanel.Dock="Top">
+            <DockPanel>
+                <materialDesign:PackIcon DockPanel.Dock="Left" Kind="Ticket" Height="24" Width="24" />
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18">Administración de Membresias</TextBlock>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <!-- AQUI VAN LOS BOTONES DE LA CABECERA-->
+        <TextBox x:Name="txt_buscar" HorizontalAlignment="Left" Height="30" TextWrapping="Wrap" materialDesign:HintAssist.Hint="Buscar" Foreground="WhiteSmoke" VerticalAlignment="Top" Width="160" Margin="80,18,0,0" FontSize="16" BorderBrush="White"/>
+        <Button x:Name="btn_salir" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                        Margin="0,5,10,0" HorizontalAlignment="Right" VerticalAlignment="Top"
+                        ToolTip="Salir" Height="48" Width="48" Click="btn_salir_Click"  >
+            <materialDesign:PackIcon Kind="ExitToApp" Height="24" Width="24" Foreground="White" BorderBrush="{x:Null}" />
+
+        </Button>
+        <Button x:Name="btn_nueva" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                        Margin="0,5,80,0" HorizontalAlignment="Right" VerticalAlignment="Top"
+                        ToolTip="Nueva Membresia" Height="48" Width="48" Click="btn_nueva_Click" Background="Green" BorderBrush="{x:Null}" >
+            <materialDesign:PackIcon Kind="Plus" Height="24" Width="24" Foreground="White" BorderBrush="{x:Null}" />
+
+        </Button>
+
+        <!--Terminan los botones de la cabecera-->
+        <!--card para los registros -->
+        <materialDesign:Card VerticalAlignment="Top" Height="586" Width="873" Margin="5,43,0,0" Padding="10" HorizontalAlignment="Left">
+            <Grid Margin="0,0,-0.2,82">
+                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Left" VerticalAlignment="Top">Membresias Registradas</TextBlock>
+                <!--AQUI VA EL DATAGRID DE LOS USUARIOS -->
+                <DataGrid x:Name="dg_membresias" IsReadOnly="True" Margin="0,45,43,-48.6" AutoGenerateColumns="False" CanUserSortColumns="False" FontFamily="Arial" FontSize="13" EnableRowVirtualization="False" BorderBrush="#89C1C1C1" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" Height="444" VerticalAlignment="Top">
+                    <!--MENU DE LAS OPCIONES DEL GRID -->
+                    <DataGrid.ContextMenu>
+                        <ContextMenu >
+                            <MenuItem  Header="Eliminar" Foreground="Red">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="Delete" Height="16" Width="16" Foreground="Red"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                            <MenuItem  Header="Huella" Foreground="Red">
+                                <MenuItem.Icon>
+                                    <materialDesign:PackIcon Kind="Fingerprint" Height="16" Width="16" Foreground="Gray"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                    <!-- ESPECIFICAMOS LAS COLUMNAS QUE DESEAMOS MOSTRAR-->
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding id_membresia}" IsReadOnly="True"  />
+                        <DataGridTextColumn Header="CLIENTE" Binding="{Binding nombre}" IsReadOnly="True"/>
+                        <DataGridTextColumn Header="TIPO" Binding="{Binding tipo_membresia}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="INICIO" Binding="{Binding fecha_inicial}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="FIN" Binding="{Binding fecha_final}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="COSTO" Binding="{Binding costo}" IsReadOnly="True" />
+                        <DataGridTextColumn Header="DESCUENTO" Binding="{Binding descuento}" IsReadOnly="True" />
+                        <DataGridTemplateColumn Header="Acciones" Width="150">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <WrapPanel>
+                                        <!-- boton de eliminar-->
+
+                                        <Button Style="{StaticResource MaterialDesignFloatingActionButton}" Height="20" Width="20"  Background="Red"  BorderBrush="{x:Null}" x:Name="btn_eliminar" CommandParameter="{Binding Path=id_membresia}" Margin="10 0 0 0" Click="btn_eliminar_Click">
+                                            <materialDesign:PackIcon Kind="Delete" Height="16" Width="16"/>
+                                        </Button>
+                                       
+                                    </WrapPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+        </materialDesign:Card>
+        <Button x:Name="btn_actualizar" Style="{StaticResource MaterialDesignFloatingActionButton}"
+            Margin="0,5,150,0" HorizontalAlignment="Right" VerticalAlignment="Top"
+            ToolTip="Actualizar" Height="48" Width="48" Click="btn_actualizar_Click" Background="Gray" BorderBrush="{x:Null}" >
+            <materialDesign:PackIcon Kind="Sync" Height="24" Width="24" Foreground="White" BorderBrush="{x:Null}" />
+
+        </Button>
+        <Button x:Name="btn_imprimir" Style="{StaticResource MaterialDesignFloatingActionButton}"
+            Margin="0,5,217,0" HorizontalAlignment="Right" VerticalAlignment="Top"
+            ToolTip="Imprimir" Height="48" Width="48" Click="btn_imprimir_Click" Background="orange"  BorderBrush="{x:Null}" >
+            <materialDesign:PackIcon Kind="Printer" Height="24" Width="24"  Foreground="White" BorderBrush="{x:Null}" />
+
+        </Button>
+        <!--termina la card para los registros-->
+        <!--El espacio para agregar -->
+    </Grid>
+</Window>

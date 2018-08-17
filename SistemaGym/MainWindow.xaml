@@ -1,0 +1,113 @@
+﻿<controls:MetroWindow x:Class="SistemaGym.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGym"
+         mc:Ignorable="d"
+        Title="SysGym" Height="720" Width="1280"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+     TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+     TextElement.FontWeight="Regular"
+     TextElement.FontSize="13"
+     TextOptions.TextFormattingMode="Ideal"
+     TextOptions.TextRenderingMode="Auto"
+     Background="{DynamicResource MaterialDesignPaper}"
+     FontFamily="{DynamicResource MaterialDesignFont}"  WindowStartupLocation="CenterScreen" WindowState="Maximized">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Shadows.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- data template used for the dialogs example, defines a View for a ViewModel of type DateTime  -->
+            
+        </ResourceDictionary>
+    </Window.Resources>
+    <materialDesign:DialogHost Identifier="RootDialog" SnackbarMessageQueue="{Binding ElementName=MainSnackbar, Path=MessageQueue}">
+        <materialDesign:DrawerHost IsLeftDrawerOpen="{Binding ElementName=MenuToggleButton, Path=IsChecked}">
+            <materialDesign:DrawerHost.LeftDrawerContent>
+                <DockPanel MinWidth="212">
+                    <Image x:Name="logo" Height="200" Stretch="Uniform" Margin="0 10 0 0" DockPanel.Dock="Top" HorizontalAlignment="Center" />
+
+                    <!--<ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" 
+                                    DockPanel.Dock="Top"
+                                    HorizontalAlignment="Right" Margin="16"
+                                    IsChecked="{Binding ElementName=MenuToggleButton, Path=IsChecked, Mode=TwoWay}" />-->
+                    <ListBox x:Name="MenuListBox" Margin="0 16 0 16" SelectedIndex="0">
+                        <ListBoxItem MouseLeftButtonUp="ListBoxItem_MouseLeftButtonUp">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Face" Width="32" Height="32" Foreground="{DynamicResource AccentColorBrush}"  Margin="18 15 0 0"/>
+                                <TextBlock Margin="20 15 0 0" FontWeight="Bold" Foreground="{DynamicResource AccentColorBrush}" TextTrimming="CharacterEllipsis" FontSize="18">Clientes</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem MouseLeftButtonUp="ListBoxItem_MouseLeftButtonUp_2" >
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Ticket" Width="32" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="18 15 0 0" Foreground="{DynamicResource AccentColorBrush}" />
+                                <TextBlock Margin="20 15 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" TextTrimming="CharacterEllipsis" FontSize="18">Membresias</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem MouseLeftButtonUp="ListBoxItem_MouseLeftButtonUp_1">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Fingerprint" Width="32" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" Margin="18 15 0 0" />
+                                <TextBlock Margin="20 15 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" TextTrimming="CharacterEllipsis" FontSize="18">Checador</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem MouseLeftButtonUp="ListBoxItem_MouseLeftButtonUp_3">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Cards" Width="32" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" Margin="18 15 0 0" />
+                                <TextBlock Margin="20 15 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" TextTrimming="CharacterEllipsis" FontSize="18">Ventas</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <ListBoxItem MouseLeftButtonUp="ListBoxItem_MouseLeftButtonUp_4">
+                            <StackPanel Orientation="Horizontal">
+                                <materialDesign:PackIcon Kind="Adjust" Width="32" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" Margin="18 15 0 0" />
+                                <TextBlock Margin="20 15 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" TextTrimming="CharacterEllipsis" FontSize="18">Configuracion</TextBlock>
+                            </StackPanel>
+                        </ListBoxItem>
+                        <Separator/>
+
+                    </ListBox>
+                </DockPanel>
+            </materialDesign:DrawerHost.LeftDrawerContent>
+            <DockPanel>
+                <materialDesign:ColorZone Padding="16" materialDesign:ShadowAssist.ShadowDepth="Depth3"
+                                            Mode="PrimaryMid" DockPanel.Dock="Top" CornerRadius="3">
+                    <DockPanel>
+                        <ToggleButton Style="{StaticResource MaterialDesignHamburgerToggleButton}" IsChecked="False"
+                                        x:Name="MenuToggleButton"/>
+                        <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges" StaysOpen="False">
+                            <StackPanel>
+                                
+                                <Button Content="Salir del Sistema" Click="Button_Click" />
+                            </StackPanel>
+                        </materialDesign:PopupBox>
+                        <TextBlock x:Name="txt_titulo" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" Text="Titulo"></TextBlock>
+                    </DockPanel>
+                </materialDesign:ColorZone>
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush x:Name="wallpaper"  TileMode="Tile" Stretch="UniformToFill"  />
+                    </Grid.Background>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
+                    <!--<ScrollViewer Grid.Row="1" 
+                                  HorizontalScrollBarVisibility="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.HorizontalScrollBarVisibilityRequirement}"
+                                  VerticalScrollBarVisibility="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.VerticalScrollBarVisibilityRequirement}" 
+                                  Padding="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.MarginRequirement}">
+                        <ContentControl Content="{Binding ElementName=DemoItemsListBox, Path=SelectedItem.Content}" />
+                    </ScrollViewer>-->
+
+                    <materialDesign:Snackbar MessageQueue="{materialDesign:MessageQueue}" x:Name="MainSnackbar"
+                                            Grid.Row="1" />
+                </Grid>
+            </DockPanel>
+        </materialDesign:DrawerHost>
+    </materialDesign:DialogHost>
+</controls:MetroWindow>

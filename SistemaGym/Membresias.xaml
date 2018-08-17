@@ -1,0 +1,87 @@
+﻿<Window x:Class="SistemaGym.Membresias"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGym"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Registrar Membresias" Height="500" Width="750" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Card.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.CheckBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Popupbox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBox.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style TargetType="{x:Type ComboBox}" BasedOn="{StaticResource MaterialDesignComboBox}">
+                <Setter Property="HorizontalAlignment" Value="Stretch" />
+                <Setter Property="Margin" Value="0 8 0 8" />
+            </Style>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <!--ESTA ES LA CABECERA -->
+        <GroupBox Grid.Row="0" Header="Resumen de la Membresia" Style="{DynamicResource MaterialDesignGroupBox}" Margin="10,289,403,0" materialDesign:ShadowAssist.ShadowDepth="Depth2" BorderThickness="0"/>
+        <!--ESTA ES LA CABECERA -->
+        <materialDesign:ColorZone Padding="20" materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                                            Mode="Dark" DockPanel.Dock="Top">
+            <DockPanel>
+                <materialDesign:PackIcon DockPanel.Dock="Left" Kind="Ticket" Height="24" Width="24" />
+                <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"><Run Text="Registro de Membresias"/></TextBlock>
+            </DockPanel>
+        </materialDesign:ColorZone>
+        <Button x:Name="btn_salir" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                        Margin="0,16,10,0" HorizontalAlignment="Right" VerticalAlignment="Top"
+                        ToolTip="Actualizar" Height="30" Width="30" Click="btn_salir_Click"  >
+            <materialDesign:PackIcon Kind="ExitToApp" Height="20" Width="20" Foreground="White" BorderBrush="{x:Null}" />
+        </Button>
+        <Button x:Name="btn_guardar" Style="{StaticResource MaterialDesignFloatingActionButton}"
+                        Margin="0,16,50,0" HorizontalAlignment="Right" VerticalAlignment="Top"
+                        ToolTip="Guardar" Height="30" Width="30" Background="Green" BorderBrush="{x:Null}" Click="btn_guardar_Click">
+            <materialDesign:PackIcon Kind="ContentSaveOutline" Height="20" Width="20" Foreground="White" BorderBrush="{x:Null}" />
+        </Button>
+        <StackPanel x:Name="PanelServicios" Orientation="Horizontal" HorizontalAlignment="center" Height="120" Width="750" VerticalAlignment="Top" Margin="0 65 0 0">
+
+            <RadioButton Content="Gimnasio" Margin="180 80 0 0" HorizontalAlignment="Center" Tag="Gym" />
+            <RadioButton Content="Zumba" Margin="100 80 0 0"  HorizontalAlignment="Center" Tag="Zumba"/>
+            <RadioButton Content="Crossfit" Margin="100 80 0 0" Tag="Crossfit"/>
+        </StackPanel>
+        <Image Source="img/gym.png" Margin="166,0,0,279" Width="100" HorizontalAlignment="Left"/>
+        <Image Source="img/cross.png" Margin="515,0,0,279" Width="60" HorizontalAlignment="Left"/>
+        <Image Source="img/zumba.png" Margin="350,0,0,279"  Width="60" HorizontalAlignment="Left"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="center" Height="120" Width="750" VerticalAlignment="Top" Margin="-4,65,-4,0">
+            <RadioButton x:Name="rb_gym" GroupName="servicio" Content="Gimnasio" Margin="180 80 0 0" HorizontalAlignment="Center" IsChecked="True" Cursor="Hand"/>
+            <RadioButton x:Name="rb_zumba" GroupName="servicio" Content="Zumba" Margin="100 80 0 0"  HorizontalAlignment="Center" Cursor="Hand"/>
+            <RadioButton x:Name="rb_cross" GroupName="servicio" Content="Crossfit" Margin="100 80 0 0" Cursor="Hand"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="center" Height="85" Width="750" VerticalAlignment="Top" Margin="0,185,0,0">
+
+            <RadioButton x:Name="rb_diario" GroupName="tiempo" Content="Diario" Margin="180 60 0 0" HorizontalAlignment="Center" IsChecked="True" Cursor="Hand" Click="rb_diario_Click" />
+            <RadioButton x:Name="rb_semana" GroupName="tiempo" Content="Semanal" Margin="100 60 0 0"  HorizontalAlignment="Center" Click="rb_semana_Click" Cursor="Hand"/>
+            <RadioButton x:Name="rb_mes" GroupName="tiempo" Content="Mensual" Margin="100 60 0 0" Cursor="Hand" Click="rb_mes_Click"/>
+        </StackPanel>
+        <materialDesign:PackIcon Kind="CalendarClock" Height="50" Foreground="OrangeRed" BorderBrush="{x:Null}" Margin="166,190,0,0" Width="100" HorizontalAlignment="Left"/>
+        <materialDesign:PackIcon Kind="CalendarRange" Height="50" Foreground="OrangeRed" BorderBrush="{x:Null}" Margin="325,190,0,0" Width="100" HorizontalAlignment="Left"/>
+        <materialDesign:PackIcon Kind="CalendarMultiple" Height="50" Foreground="OrangeRed" BorderBrush="{x:Null}" Margin="493,190,0,0" Width="100" HorizontalAlignment="Left"/>
+        <Separator HorizontalAlignment="Left" Height="86" Margin="0,135,0,0" VerticalAlignment="Top" Width="750"/>
+        <Separator HorizontalAlignment="Left" Height="81" Margin="0,245,0,0" VerticalAlignment="Top" Width="750"/>
+        <Label Content="Fecha Inicial:" HorizontalAlignment="Left" Margin="13,340,0,0" VerticalAlignment="Top"/>
+        <Label Content="Fecha Final:" HorizontalAlignment="Left" Margin="13,382,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="date_inicio" HorizontalAlignment="Left" Margin="106,340,0,0" VerticalAlignment="Top" Width="160" SelectedDateChanged="date_inicio_SelectedDateChanged"/>
+        <DatePicker x:Name="date_fin" HorizontalAlignment="Left" Margin="106,382,0,0" VerticalAlignment="Top" Width="160"/>
+        <GroupBox Grid.Row="0" Header="Resumen de la Membresia" Style="{DynamicResource MaterialDesignGroupBox}" Margin="403,289,10,0" materialDesign:ShadowAssist.ShadowDepth="Depth2" BorderThickness="0"/>
+        <Label Content="Subtotal:     $" HorizontalAlignment="Left" Margin="412,339,0,0" VerticalAlignment="Top"  FontWeight="Bold" FontSize="16"/>
+        <Label Content="Descuento: $" HorizontalAlignment="Left" Margin="412,381,0,0" VerticalAlignment="Top"  FontWeight="Bold" FontSize="16"/>
+        <Label Content="Total:          $" HorizontalAlignment="Left" Margin="412,423,0,0" VerticalAlignment="Top"  FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="txt_subtotal" HorizontalAlignment="Left" Height="31" Margin="528,335,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" Width="159" RenderTransformOrigin="1.375,-6" IsEnabled="False" FontWeight="Bold" FontSize="16" TextChanged="txt_subtotal_TextChanged"/>
+        <TextBox x:Name="txt_descuento" HorizontalAlignment="Left" Height="39" Margin="527,367,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="" VerticalAlignment="Top" Width="160" RenderTransformOrigin="1.375,-6" TextChanged="txt_descuento_TextChanged"  FontWeight="Bold" FontSize="16"/>
+        <TextBox x:Name="txt_total" HorizontalAlignment="Left" Height="38" Margin="526,411,0,0" TextWrapping="Wrap" Text="" TextAlignment="Center" VerticalAlignment="Top" Width="161" RenderTransformOrigin="1.375,-6" IsEnabled="False" FontWeight="Bold" FontSize="16" TextChanged="txt_total_TextChanged"/>
+
+    </Grid>
+</Window>

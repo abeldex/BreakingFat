@@ -1,0 +1,54 @@
+K:\Programacion\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+K:\Programacion\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+K:\Programacion\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+K:\Programacion\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+K:\Programacion\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+I:\Programacion\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+I:\Programacion\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+I:\Programacion\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+I:\Programacion\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+I:\Programacion\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+I:\Programacion\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+F:\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+F:\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+F:\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+F:\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+F:\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+F:\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+C:\Users\Planeacion-PC\Documents\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+F:\GYM FAROS\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+F:\GYM FAROS\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+F:\GYM FAROS\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+F:\GYM FAROS\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+F:\GYM FAROS\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+F:\GYM FAROS\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+C:\Users\Public\Documents\PROYECTOS\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+C:\Users\Agustin Lafarga\Documents\Abel\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+F:\raiz\GymSisV1_old_new\Datos\bin\Release\Datos.dll.config
+F:\raiz\GymSisV1_old_new\Datos\bin\Release\Datos.dll
+F:\raiz\GymSisV1_old_new\Datos\bin\Release\Datos.pdb
+F:\raiz\GymSisV1_old_new\Datos\obj\Release\Datos.csprojResolveAssemblyReference.cache
+F:\raiz\GymSisV1_old_new\Datos\obj\Release\Datos.dll
+F:\raiz\GymSisV1_old_new\Datos\obj\Release\Datos.pdb
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Release\Datos.dll.config
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Release\Datos.dll
+C:\Users\hp\source\repos\SistemaGym\Datos\bin\Release\Datos.pdb
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Release\Datos.csprojAssemblyReference.cache
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Release\Datos.csproj.CoreCompileInputs.cache
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Release\Datos.dll
+C:\Users\hp\source\repos\SistemaGym\Datos\obj\Release\Datos.pdb
