@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\hp\source\repos\SistemaGym\SistemaGym\obj\Debug\
+C:\Users\HP\source\repos\BreakingFat\SistemaGym\obj\Debug\
 SistemaGym
 none
 false
 DEBUG;TRACE
-C:\Users\hp\source\repos\SistemaGym\SistemaGym\App.xaml
-221209145045
+C:\Users\HP\source\repos\BreakingFat\SistemaGym\App.xaml
+23-2130898795
 
-47-600427795
-37933804461
-AdministracionMembresias.xaml;AsignarHuella.xaml;BuscarCliente.xaml;clientes.xaml;Configuracion.xaml;Design.xaml;InputDialog.xaml;MainWindow.xaml;Membresias.xaml;nuevo_cliente.xaml;PDFView.xaml;REportes.xaml;Resources\Icons.xaml;VerChecador.xaml;vista\CrearCategoria.xaml;vista\CrearProducto.xaml;vista\EditarCategoria.xaml;vista\EditarProducto.xaml;vista\MainWindow.xaml;vista\Mensaje.xaml;vista\MontoDePago.xaml;vista\VerDetalleVenta.xaml;
+481813050086
+372020294027
+AdministracionMembresias.xaml;AsignarHuella.xaml;BuscarCliente.xaml;clientes.xaml;Configuracion.xaml;Design.xaml;InputDialog.xaml;MainWindow.xaml;Membresias.xaml;nuevo_cliente.xaml;PDFView.xaml;REportes.xaml;Resources\Icons.xaml;ventas\Ventas.xaml;VerChecador.xaml;vista\CrearCategoria.xaml;vista\CrearProducto.xaml;vista\EditarCategoria.xaml;vista\EditarProducto.xaml;vista\MainWindow.xaml;vista\Mensaje.xaml;vista\MontoDePago.xaml;vista\VerDetalleVenta.xaml;
 
 True
 

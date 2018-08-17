@@ -90,3 +90,15 @@ C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Debug\Negocios.dll
 C:\Users\hp\source\repos\SistemaGym\Negocios\obj\Debug\Negocios.pdb
 C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Debug\Entidades.dll
 C:\Users\hp\source\repos\SistemaGym\Negocios\bin\Debug\Entidades.pdb
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Negocios.dll
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Negocios.pdb
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Datos.dll
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Entidades.dll
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Datos.pdb
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Datos.dll.config
+C:\Users\HP\source\repos\BreakingFat\Negocios\bin\Debug\Entidades.pdb
+C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.dll
+C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.pdb

@@ -63,3 +63,13 @@ C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.pdb
 C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Entidades.dll
 C:\Users\hp\source\repos\SistemaGym\Datos\bin\Debug\Entidades.pdb
 C:\Users\hp\source\repos\SistemaGym\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\HP\source\repos\BreakingFat\Datos\bin\Debug\Datos.dll.config
+C:\Users\HP\source\repos\BreakingFat\Datos\bin\Debug\Datos.dll
+C:\Users\HP\source\repos\BreakingFat\Datos\bin\Debug\Datos.pdb
+C:\Users\HP\source\repos\BreakingFat\Datos\bin\Debug\Entidades.dll
+C:\Users\HP\source\repos\BreakingFat\Datos\bin\Debug\Entidades.pdb
+C:\Users\HP\source\repos\BreakingFat\Datos\obj\Debug\Datos.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\BreakingFat\Datos\obj\Debug\Datos.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BreakingFat\Datos\obj\Debug\Datos.csproj.CopyComplete
+C:\Users\HP\source\repos\BreakingFat\Datos\obj\Debug\Datos.dll
+C:\Users\HP\source\repos\BreakingFat\Datos\obj\Debug\Datos.pdb

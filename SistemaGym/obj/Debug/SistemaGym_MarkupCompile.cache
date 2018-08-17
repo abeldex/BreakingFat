@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\HP\source\repos\BreakingFat\SistemaGym\App.xaml
-221209145045
+23-2130898795
 
-47-270408001
-372020294027
-AdministracionMembresias.xaml;AsignarHuella.xaml;BuscarCliente.xaml;clientes.xaml;Configuracion.xaml;Design.xaml;InputDialog.xaml;MainWindow.xaml;Membresias.xaml;nuevo_cliente.xaml;PDFView.xaml;REportes.xaml;Resources\Icons.xaml;VerChecador.xaml;vista\CrearCategoria.xaml;vista\CrearProducto.xaml;vista\EditarCategoria.xaml;vista\EditarProducto.xaml;vista\MainWindow.xaml;vista\Mensaje.xaml;vista\MontoDePago.xaml;vista\VerDetalleVenta.xaml;
+441864901992
+302115489100
+AdministracionMembresias.xaml;AsignarHuella.xaml;BuscarCliente.xaml;clientes.xaml;Configuracion.xaml;Design.xaml;InputDialog.xaml;MainWindow.xaml;Membresias.xaml;nuevo_cliente.xaml;PDFView.xaml;REportes.xaml;Resources\Icons.xaml;ventas\Ventas.xaml;VerChecador.xaml;vista\CrearCategoria.xaml;vista\CrearProducto.xaml;vista\EditarCategoria.xaml;vista\EditarProducto.xaml;vista\MainWindow.xaml;vista\Mensaje.xaml;vista\MontoDePago.xaml;vista\VerDetalleVenta.xaml;
 
 True
 

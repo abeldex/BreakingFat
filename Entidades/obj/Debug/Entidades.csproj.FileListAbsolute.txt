@@ -4,3 +4,9 @@ C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.csprojAssembly
 C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
 C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.dll
 C:\Users\hp\source\repos\SistemaGym\Entidades\obj\Debug\Entidades.pdb
+C:\Users\HP\source\repos\BreakingFat\Entidades\bin\Debug\Entidades.dll
+C:\Users\HP\source\repos\BreakingFat\Entidades\bin\Debug\Entidades.pdb
+C:\Users\HP\source\repos\BreakingFat\Entidades\obj\Debug\Entidades.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\BreakingFat\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\BreakingFat\Entidades\obj\Debug\Entidades.dll
+C:\Users\HP\source\repos\BreakingFat\Entidades\obj\Debug\Entidades.pdb

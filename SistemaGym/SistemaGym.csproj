@@ -154,6 +154,9 @@
     <Compile Include="REportes.xaml.cs">
       <DependentUpon>REportes.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ventas\Ventas.xaml.cs">
+      <DependentUpon>Ventas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="VerChecador.xaml.cs">
       <DependentUpon>VerChecador.xaml</DependentUpon>
     </Compile>
@@ -249,6 +252,10 @@
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ventas\Ventas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VerChecador.xaml">
       <SubType>Designer</SubType>

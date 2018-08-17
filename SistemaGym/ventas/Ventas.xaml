@@ -1,0 +1,265 @@
+﻿<controls:MetroWindow x:Class="SistemaGym.ventas.Ventas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGym"              
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"
+        xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"     
+        mc:Ignorable="d"
+ Title="Ventas" Height="768" Width="1360" WindowState="Maximized"  WindowStyle="None" ShowInTaskbar="true" WindowStartupLocation="CenterOwner" >
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="123*"/>
+            <ColumnDefinition Width="488*"/>
+            <ColumnDefinition Width="244*"/>
+            <ColumnDefinition Width="264*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="440"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="30*"/>
+        </Grid.RowDefinitions>
+        <!--ESTA ES LA CABECERA -->
+        <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" Height="72" Grid.ColumnSpan="6">
+
+            <DockPanel>
+                <materialDesign:PackIcon DockPanel.Dock="Left" Kind="Shopping" Height="30" Width="30" VerticalAlignment="Center"/>
+
+                <StackPanel Orientation="Horizontal"
+
+                            materialDesign:RippleAssist.IsCentered="True">
+
+
+
+                    <materialDesign:ColorZone Mode="Light" Padding="8 4 8 4" CornerRadius="2" Panel.ZIndex="1"
+
+                                   Margin="16 0 0 0"
+
+                                   materialDesign:ShadowAssist.ShadowDepth="Depth1">
+
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+
+                                <ColumnDefinition Width="Auto" />
+
+                                <ColumnDefinition Width="*" />
+
+                                <ColumnDefinition Width="Auto" />
+
+                            </Grid.ColumnDefinitions>
+
+                            <Button Style="{DynamicResource MaterialDesignToolButton}">
+
+                                <materialDesign:PackIcon Kind="BarcodeScan" Opacity=".56" />
+
+                            </Button>
+
+                            <TextBox x:Name="txt_buscar" Grid.Column="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Código del Producto" 
+
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
+
+                                     MinWidth="200" VerticalAlignment="Center"/>
+
+
+
+                        </Grid>
+
+                    </materialDesign:ColorZone>
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Check"/>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[Enter] Agregar Producto</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="Magnify"/>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[F10] Buscar</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CashMultiple"/>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[F7] Entradas</TextBlock>
+                        </StackPanel>
+                    </Button>
+
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CardsOutline"/>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[F8] Salidas</TextBlock>
+                        </StackPanel>
+                    </Button>
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                        <StackPanel Orientation="Horizontal">
+                            <materialDesign:PackIcon Kind="CardsOutline"/>
+                            <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[DEL] Borrar Articulo</TextBlock>
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
+
+            </DockPanel>
+
+        </materialDesign:ColorZone>
+        <DataGrid Cursor="Arrow"  IsReadOnly="True" RowHeaderWidth="0" GridLinesVisibility="None" AutoGenerateColumns="False" x:Name="gridCarroDeCompras" Foreground="#62666A" Margin="0,0,0,0" BorderBrush="Transparent" Background="Transparent" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="BorderThickness" Value="0,0,2,5"/>
+                    <Setter Property="BorderBrush" Value="#E0E0E0"/>
+                    <Setter Property="Padding" Value="10,5,0,5"/>
+                    <Setter Property="Margin" Value="0,0,0,15"/>
+                </Style>
+            </DataGrid.Resources>
+
+            <!--Agregar padding en las celdas-->
+            <DataGrid.CellStyle>
+                <Style TargetType="DataGridCell">
+                    <Setter Property="FontSize" Value="18"/>
+                    <Setter Property="FontWeight" Value="Normal"/>
+                    <Setter Property="Padding" Value="0,0,0,0"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                    <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Background" Value="#6AC4EA" />
+                            <Setter Property="BorderBrush" Value="#6AC4EA" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </DataGrid.CellStyle>
+            <!--Fin padding-->
+
+            <!--Columnas-->
+            <DataGrid.Columns>
+                <!--Binding sirve para enlazar los componentes gráficos con la parte lógica,
+                        En este caso los nombres asociados al binding deben ser identicos a los métodos
+                        Get y Set de la clase CarroDeCompra Esto ocurre por que los atributos son privados,
+                        Si no fueran privados, se podría tomar el nombre del atributo de clase tal cual-->
+                <DataGridTextColumn Binding="{Binding Codigo}" Header="Código de Barras" Width="140" IsReadOnly="True"   />
+                <DataGridTextColumn Binding="{Binding Nombre}" Header="Descripción del Producto" Width="400" IsReadOnly="True">
+                    <DataGridTextColumn.CellStyle>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="Background" Value="#E1F3FB" />
+                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="FontWeight" Value="Normal"/>
+                            <Setter Property="Padding" Value="10,10,0,10"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type DataGridCell}">
+                                        <Border Padding="{TemplateBinding Padding}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="True">
+                                            <ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#3AA0CC" />
+                                    <Setter Property="BorderBrush" Value="#3AA0CC" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGridTextColumn.CellStyle>
+                </DataGridTextColumn>
+
+                <DataGridTextColumn Binding="{Binding Cantidad}" Header="Cantidad" Width="140" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding Precio}" Header="Importe" Width="140" IsReadOnly="True"  />
+                <DataGridTextColumn Binding="{Binding SubTotal}" Header="Existencia" Width="140" IsReadOnly="True"  />
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.Header>
+                        <TextBlock Text="Eliminar" Padding="0,0,20,0"/>
+                    </DataGridTemplateColumn.Header>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Foreground="#62666A" Content="&#xf014;" BorderBrush="Transparent" Background="Transparent">
+                                <Button.Style>
+                                    <Style TargetType="{x:Type Button}">
+                                        <Setter Property="Template">
+                                            <Setter.Value>
+                                                <ControlTemplate TargetType="{x:Type Button}">
+                                                    <Border Background="{TemplateBinding Background}">
+                                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                                    </Border>
+                                                </ControlTemplate>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </Button.Style>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+            <!--Fin columnas-->
+
+        </DataGrid>
+
+        <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="3" Content="Total:" Foreground="Black" Background="Transparent" FontWeight="Bold"  FontSize="16" Height="31" Margin="30,0" Width="50"/>
+        <Label VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="0" Grid.Row="4" Content="$0.00" Foreground="Teal" FontSize="20" Height="37" Margin="26,0" Width="58"/>
+
+        <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="3" Content="Pago con:" Foreground="Black" Background="Transparent" FontWeight="Bold"  FontSize="16" Height="31" Margin="20,0,19,0" Width="84"/>
+        <Label VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="1" Grid.Row="4" Content="$0.00" Foreground="Teal" FontSize="20" Height="37" Margin="33,0" Width="57"/>
+
+        <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="3" Content="Cambio:" Foreground="Black" Background="Transparent" FontWeight="Bold"  FontSize="16" Height="31" Margin="25,0,26,0" Width="72"/>
+        <Label VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="4" Content="$0.00" Foreground="Teal" FontSize="20" Height="37" Margin="33,0" Width="57"/>
+
+        <Button Height="40" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="215">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Printer"/>
+                <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Reimprimir Ultimo Ticket</TextBlock>
+            </StackPanel>
+        </Button>
+        <Button Height="40" Width="245" Margin="0,0,10,0" Grid.Column="5" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Cash100"/>
+                <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Ventas del día</TextBlock>
+            </StackPanel>
+        </Button>
+
+        <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" Height="72" Grid.ColumnSpan="5" Grid.Row="3">
+
+            <DockPanel>
+                <materialDesign:PackIcon DockPanel.Dock="Left" Kind="Shopping" Height="30" Width="30" VerticalAlignment="Center"/>
+
+                <StackPanel Orientation="Horizontal"
+
+                            materialDesign:RippleAssist.IsCentered="True">
+                    <TextBlock Text="0" Panel.ZIndex="0" FontSize="30" Margin="8 0 0 0"></TextBlock>
+                    <TextBlock Text="Productos en la venta actual" FontSize="25" Margin="12 0 0 0" VerticalAlignment="Center"></TextBlock>
+                </StackPanel>
+
+            </DockPanel>
+
+        </materialDesign:ColorZone>
+        <Button Background="White" Foreground="Teal" Height="72" Margin="8 0 0 0" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Coin" VerticalAlignment="Center" Height="30" Width="30"/>
+                <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" FontSize="18">[F12] Cobrar</TextBlock>
+            </StackPanel>
+        </Button>
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center"  Grid.Column="5" Grid.Row="3" FontSize="55" Height="73" Margin="66,0" Width="132" >$0.00</TextBlock>
+
+    </Grid>
+</controls:MetroWindow>
