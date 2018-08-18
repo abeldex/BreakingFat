@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/320px-insert_image_here-.svg-1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("img/bf1.jpg")]
 
 

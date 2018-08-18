@@ -58,7 +58,7 @@
                         </ListBoxItem>
                         <ListBoxItem MouseLeftButtonUp="ListBoxItem_MouseLeftButtonUp_3">
                             <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Cards" Width="32" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" Margin="18 15 0 0" />
+                                <materialDesign:PackIcon Kind="Coin" Width="32" Height="32" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" Margin="18 15 0 0" />
                                 <TextBlock Margin="20 15 0 0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="{DynamicResource AccentColorBrush}" TextTrimming="CharacterEllipsis" FontSize="18">Ventas</TextBlock>
                             </StackPanel>
                         </ListBoxItem>

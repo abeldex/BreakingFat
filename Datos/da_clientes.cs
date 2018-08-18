@@ -1,5 +1,6 @@
 ﻿using Entidades;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -17,6 +18,50 @@ namespace Datos
         public da_clientes()
         {
             conexion = new conexion();
+        }
+
+        public object obtener_datos(int codigo)
+        {
+            clientes cliente = new clientes();
+            try
+            {
+                if (conexion.abrirConexion())
+                {
+                    //conexionPostgreSql.retornarConexion().BeginTransaction();
+                    string consulta = "SELECT * FROM dbo.cliente WHERE cod_cliente = "+codigo;
+                    SqlCommand command = new SqlCommand(consulta, conexion.retornarConexion());
+                    SqlDataReader dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        cliente.CLIENTE_COD = Convert.ToInt32(dataReader[0]);
+                        cliente.CLIENTE_NOMBRE = Convert.ToString(dataReader[1]);
+                        cliente.CLIENTE_DIRECCION = Convert.ToString(dataReader[2]);
+                        cliente.CLIENTE_CIUDAD = Convert.ToString(dataReader[3]);
+                        cliente.CLIENTE_TELEFONO = Convert.ToString(dataReader[4]);
+                        cliente.CLIENTE_SEXO = Convert.ToString(dataReader[5]);
+                        cliente.CLIENTE_CORREO = Convert.ToString(dataReader[6]);
+                        cliente.CLIENTE_FECHA_NAC = Convert.ToDateTime(dataReader[7]);
+
+                        if (dataReader[9] != DBNull.Value) {cliente.CLIENTE_ALTURA = Convert.ToDecimal(dataReader[9]); } else { cliente.CLIENTE_ALTURA = 0; }
+                           
+                        if (dataReader[10] != DBNull.Value) {cliente.CLIENTE_PESO = Convert.ToDecimal(dataReader[10]); } else { cliente.CLIENTE_PESO = 0; }
+                        if (dataReader[11] != DBNull.Value) {cliente.CLIENTE_CUELLO = Convert.ToDecimal(dataReader[11]); } else { cliente.CLIENTE_CUELLO = 0; }
+                        if (dataReader[12] != DBNull.Value) {cliente.CLIENTE_TORAX = Convert.ToDecimal(dataReader[12]); } else { cliente.CLIENTE_TORAX = 0; }
+                        if (dataReader[13] != DBNull.Value) {cliente.CLIENTE_BRAZO = Convert.ToDecimal(dataReader[13]); } else { cliente.CLIENTE_BRAZO = 0; }
+                        if (dataReader[14] != DBNull.Value) {cliente.CLIENTE_CINTURA = Convert.ToDecimal(dataReader[14]); } else { cliente.CLIENTE_CINTURA = 0; }
+                        if (dataReader[15] != DBNull.Value) {cliente.CLIENTE_CADERA = Convert.ToDecimal(dataReader[15]); } else { cliente.CLIENTE_CADERA = 0; }
+                        if (dataReader[16] != DBNull.Value) {cliente.CLIENTE_PIERNA = Convert.ToDecimal(dataReader[16]); } else { cliente.CLIENTE_PIERNA = 0; }
+                        if (dataReader[17] != DBNull.Value) {cliente.CLIENTE_PANTORRILLA = Convert.ToDecimal(dataReader[17]); } else { cliente.CLIENTE_PANTORRILLA = 0; }
+
+                    }
+                    conexion.cerrarConexion();
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            return cliente;
         }
 
         public int Crear_cliente(Entidades.clientes cliente)

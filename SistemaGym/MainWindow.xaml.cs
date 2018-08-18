@@ -91,7 +91,7 @@ namespace SistemaGym
 
         private void ListBoxItem_MouseLeftButtonUp_3(object sender, MouseButtonEventArgs e)
         {
-            ControlVentas.MainWindow ventas = new ControlVentas.MainWindow();
+            ventas.Ventas ventas = new ventas.Ventas();
             ventas.Show();
         }
 

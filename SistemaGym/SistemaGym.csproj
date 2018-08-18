@@ -119,6 +119,9 @@
     <Compile Include="BuscarCliente.xaml.cs">
       <DependentUpon>BuscarCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Vclientes\Perfil.xaml.cs">
+      <DependentUpon>Perfil.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Configuracion.xaml.cs">
       <DependentUpon>Configuracion.xaml</DependentUpon>
     </Compile>
@@ -153,6 +156,9 @@
     </Compile>
     <Compile Include="REportes.xaml.cs">
       <DependentUpon>REportes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ventas\Productos.xaml.cs">
+      <DependentUpon>Productos.xaml</DependentUpon>
     </Compile>
     <Compile Include="ventas\Ventas.xaml.cs">
       <DependentUpon>Ventas.xaml</DependentUpon>
@@ -200,6 +206,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="clientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Vclientes\Perfil.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -252,6 +262,10 @@
     <Page Include="Resources\Icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ventas\Productos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ventas\Ventas.xaml">
       <SubType>Designer</SubType>
@@ -381,6 +395,24 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="icon_dUe_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bf1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bf2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bf3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bf4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\bf5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\imc_bmi_indice_massa_corpor.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

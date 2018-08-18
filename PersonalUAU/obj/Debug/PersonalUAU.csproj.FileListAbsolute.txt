@@ -60,3 +60,4 @@ C:\Users\HP\source\repos\BreakingFat\PersonalUAU\obj\Debug\PersonalUAU.csproj.Co
 C:\Users\HP\source\repos\BreakingFat\PersonalUAU\obj\Debug\PersonalUAU.csproj.CopyComplete
 C:\Users\HP\source\repos\BreakingFat\PersonalUAU\obj\Debug\PersonalUAU.dll
 C:\Users\HP\source\repos\BreakingFat\PersonalUAU\obj\Debug\PersonalUAU.pdb
+C:\Users\hp\Source\Repos\BreakingFat\PersonalUAU\bin\Debug\DPUruNet.dll

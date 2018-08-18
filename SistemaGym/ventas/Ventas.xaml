@@ -24,11 +24,11 @@
             <ColumnDefinition Width="264*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="440"/>
+            <RowDefinition Height="73*"/>
+            <RowDefinition Height="478"/>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="65*"/>
-            <RowDefinition Height="30*"/>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="66*"/>
         </Grid.RowDefinitions>
         <!--ESTA ES LA CABECERA -->
         <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" Height="72" Grid.ColumnSpan="6">
@@ -106,7 +106,7 @@
                     </Button>
                     <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
                         <StackPanel Orientation="Horizontal">
-                            <materialDesign:PackIcon Kind="CardsOutline"/>
+                            <materialDesign:PackIcon Kind="DeleteForever"/>
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[DEL] Borrar Articulo</TextBlock>
                         </StackPanel>
                     </Button>
@@ -225,7 +225,7 @@
         <Label VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="3" Content="Cambio:" Foreground="Black" Background="Transparent" FontWeight="Bold"  FontSize="16" Height="31" Margin="25,0,26,0" Width="72"/>
         <Label VerticalAlignment="Top" HorizontalAlignment="Center" Grid.Column="2" Grid.Row="4" Content="$0.00" Foreground="Teal" FontSize="20" Height="37" Margin="33,0" Width="57"/>
 
-        <Button Height="40" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Width="215">
+        <Button Height="40" Grid.Column="4" Grid.Row="4" HorizontalAlignment="Stretch" VerticalAlignment="Top" Margin="14,0">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Printer"/>
                 <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Reimprimir Ultimo Ticket</TextBlock>
@@ -253,7 +253,7 @@
             </DockPanel>
 
         </materialDesign:ColorZone>
-        <Button Background="White" Foreground="Teal" Height="72" Margin="8 0 0 0" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Button Name="btn_cobrar" Background="White" Foreground="Teal" Height="72" Margin="8 0 0 0" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Coin" VerticalAlignment="Center" Height="30" Width="30"/>
                 <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" FontSize="18">[F12] Cobrar</TextBlock>

@@ -508,7 +508,10 @@ namespace SistemaGym
 
         private void btn_perfil_Click(object sender, RoutedEventArgs e)
         {
-
+            //obtenemos el usuario desde el datagrid por medio de la fila seleccionada
+            object Cliente = ((Button)sender).CommandParameter;
+            Vclientes.Perfil perfil = new Vclientes.Perfil(Cliente);
+            perfil.Show();
         }
     }
    

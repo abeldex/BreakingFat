@@ -138,7 +138,7 @@
                                         <TextBlock Text="{Binding CORREO}" />
                                         <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 -40 0 0">
                                             <StackPanel>
-                                                <Button BorderBrush="{x:Null}" x:Name="btn_perfil" CommandParameter="{Binding COD}" Content="Ver Perfil" Click="btn_perfil_Click" />
+                                                <Button BorderBrush="{x:Null}" x:Name="btn_perfil" CommandParameter="{Binding COD}" Content="Ver Perfil" Click="btn_perfil_Click"/>
                                                 <Button  Background="Red"  BorderBrush="{x:Null}" x:Name="btn_eliminar" CommandParameter="{Binding COD}" Click="btn_eliminar_Click" Content="Eliminar"/>
 
 
