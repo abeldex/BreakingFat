@@ -102,3 +102,15 @@ C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.csproj.CoreComp
 C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.csproj.CopyComplete
 C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.dll
 C:\Users\HP\source\repos\BreakingFat\Negocios\obj\Debug\Negocios.pdb
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Negocios.dll
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Negocios.pdb
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Datos.dll
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Entidades.dll
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Datos.pdb
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Datos.dll.config
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\bin\Debug\Entidades.pdb
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\obj\Debug\Negocios.csprojAssemblyReference.cache
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\obj\Debug\Negocios.csproj.CopyComplete
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\obj\Debug\Negocios.dll
+C:\Users\Mario\Source\Repos\BreakingFat\Negocios\obj\Debug\Negocios.pdb

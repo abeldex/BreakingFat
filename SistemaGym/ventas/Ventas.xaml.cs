@@ -23,5 +23,11 @@ namespace SistemaGym.ventas
         {
             InitializeComponent();
         }
+
+        private void btn_buscar_prod_Click(object sender, RoutedEventArgs e)
+        {
+            ventas.Productos p = new ventas.Productos();
+            p.Show();
+        }
     }
 }

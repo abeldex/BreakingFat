@@ -12,7 +12,7 @@
         xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
         xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"     
         mc:Ignorable="d"
- Title="Ventas" Height="768" Width="1360" WindowState="Maximized"  WindowStyle="None" ShowInTaskbar="true" WindowStartupLocation="CenterOwner" >
+ Title="Ventas" Height="768" Width="1360" WindowState="Maximized" WindowStyle="None" ShowInTaskbar="true" WindowStartupLocation="CenterOwner" >
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -84,7 +84,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                    <Button Name="btn_buscar_prod" Click="btn_buscar_prod_Click" Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Magnify"/>
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[F10] Buscar</TextBlock>
