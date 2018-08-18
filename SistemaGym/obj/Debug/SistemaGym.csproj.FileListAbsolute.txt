@@ -286,3 +286,5 @@ C:\Users\Mario\Source\Repos\BreakingFat\SistemaGym\obj\Debug\SistemaGym.csproj.C
 C:\Users\Mario\Source\Repos\BreakingFat\SistemaGym\obj\Debug\SistemaGym.csproj.CopyComplete
 C:\Users\Mario\Source\Repos\BreakingFat\SistemaGym\obj\Debug\SistemaGym.exe
 C:\Users\Mario\Source\Repos\BreakingFat\SistemaGym\obj\Debug\SistemaGym.pdb
+C:\Users\Mario\source\repos\BreakingFat\SistemaGym\obj\Debug\ventas\AbrirrCaja.g.cs
+C:\Users\Mario\source\repos\BreakingFat\SistemaGym\obj\Debug\ventas\AbrirrCaja.baml

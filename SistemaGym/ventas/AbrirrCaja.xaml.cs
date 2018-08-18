@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,28 +16,18 @@ using System.Windows.Shapes;
 namespace SistemaGym.ventas
 {
     /// <summary>
-    /// Interaction logic for Ventas.xaml
+    /// Interaction logic for Productos.xaml
     /// </summary>
-    public partial class Ventas
+    public partial class AbrirCaja
     {
-        public Ventas()
+        public AbrirCaja()
         {
             InitializeComponent();
-            CajaEstado(true);
         }
 
-        private void CajaEstado(bool estado)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (estado) {
-                AbrirCaja c = new AbrirCaja();
-                c.ShowDialog();
-            }
-                
-        }
-        private void btn_buscar_prod_Click(object sender, RoutedEventArgs e)
-        {
-            ventas.Productos p = new ventas.Productos();
-            p.Show();
+
         }
     }
 }

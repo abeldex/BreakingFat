@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Mario\Source\Repos\BreakingFat\SistemaGym\obj\Debug\
+C:\Users\Mario\source\repos\BreakingFat\SistemaGym\obj\Debug\
 SistemaGym
 none
 false
 DEBUG;TRACE
-C:\Users\Mario\Source\Repos\BreakingFat\SistemaGym\App.xaml
-25-576913130
+C:\Users\Mario\source\repos\BreakingFat\SistemaGym\App.xaml
+26-249937381
 
-50-1644983144
-37-1504483795
-AdministracionMembresias.xaml;AsignarHuella.xaml;BuscarCliente.xaml;clientes.xaml;Vclientes\Perfil.xaml;Configuracion.xaml;Design.xaml;InputDialog.xaml;MainWindow.xaml;Membresias.xaml;nuevo_cliente.xaml;PDFView.xaml;REportes.xaml;Resources\Icons.xaml;ventas\Productos.xaml;ventas\Ventas.xaml;VerChecador.xaml;vista\CrearCategoria.xaml;vista\CrearProducto.xaml;vista\EditarCategoria.xaml;vista\EditarProducto.xaml;vista\MainWindow.xaml;vista\Mensaje.xaml;vista\MontoDePago.xaml;vista\VerDetalleVenta.xaml;
+51-531498784
+37-2028068555
+AdministracionMembresias.xaml;AsignarHuella.xaml;BuscarCliente.xaml;clientes.xaml;Vclientes\Perfil.xaml;Configuracion.xaml;Design.xaml;InputDialog.xaml;MainWindow.xaml;Membresias.xaml;nuevo_cliente.xaml;PDFView.xaml;REportes.xaml;Resources\Icons.xaml;ventas\AbrirrCaja.xaml;ventas\Productos.xaml;ventas\Ventas.xaml;VerChecador.xaml;vista\CrearCategoria.xaml;vista\CrearProducto.xaml;vista\EditarCategoria.xaml;vista\EditarProducto.xaml;vista\MainWindow.xaml;vista\Mensaje.xaml;vista\MontoDePago.xaml;vista\VerDetalleVenta.xaml;
 
-False
+True
 

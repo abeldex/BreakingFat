@@ -1,0 +1,44 @@
+﻿<controls:MetroWindow x:Class="SistemaGym.ventas.AbrirCaja"
+                xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SistemaGym.ventas"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
+        xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"
+        xmlns:dialogs="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
+        xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"     
+        mc:Ignorable="d"
+ Height="192" Width="340" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="55"/>
+            <ColumnDefinition Width="297.333"/>
+            <ColumnDefinition Width="31.333"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="51"/>
+            <RowDefinition Height="53.333"/>
+            <RowDefinition Height="69.333"/>
+        </Grid.RowDefinitions>
+        <materialDesign:PackIcon Kind="SquareIncCash" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Margin="7,5,7.667,5.667"/>
+        <TextBlock Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" FontWeight="Bold" Height="27" Margin="7.333,12,74,11.667" Width="216">Comenzar nuevo turno</TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" Margin="10.333,5.333,60,6" Width="227" >
+            <materialDesign:HintAssist.Hint>
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 0">
+                    <TextBlock>¿ Efectivo Inicial en Caja ?</TextBlock>
+                </StackPanel>
+            </materialDesign:HintAssist.Hint>
+        </TextBox>
+        <Button Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0.333,16,0,21.333" Width="246" Click="Button_Click">
+            <StackPanel Orientation="Horizontal">
+                <materialDesign:PackIcon Kind="Coin" Margin="0 0 8 0"></materialDesign:PackIcon>
+                <TextBlock>Registrar dinero inicial en caja</TextBlock>
+            </StackPanel>
+        </Button>
+    </Grid>
+</controls:MetroWindow>
+

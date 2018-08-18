@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\SistemaGym",
+    "\\SistemaGym\\ventas"
   ],
   "SelectedNode": "\\SistemaGym.sln",
   "PreviewInSolutionExplorer": false
