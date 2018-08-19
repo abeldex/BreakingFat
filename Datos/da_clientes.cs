@@ -11,16 +11,49 @@ using System.Windows;
 
 namespace Datos
 {
-    public class da_clientes
+    public class Da_clientes
     {
+        //creacion del objeto de la base de datos
         private conexion conexion;
 
-        public da_clientes()
+        public Da_clientes()
         {
+            //inicializacion de la base de datos
             conexion = new conexion();
         }
 
-        public object obtener_datos(int codigo)
+        /// <summary>
+        /// Metodo para obetener todos los clientes registrados en la base de datos
+        /// </summary>
+        /// <returns></returns>
+        public DataView ListarClientes()
+        {
+            try
+            {
+                DataTable dt = new DataTable("Cliente");
+                if (conexion.abrirConexion())
+                {
+
+                    string consulta = "SELECT * FROM dbo.cliente";
+                    SqlCommand command = new SqlCommand(consulta, conexion.retornarConexion());
+                    SqlDataAdapter sda = new SqlDataAdapter(command);
+                    
+                    sda.Fill(dt);            
+                }
+                return dt.DefaultView;
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Metodo para Obtener los clientes registrados en la base de datos
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <returns></returns>
+        public object Obtener_datos(int codigo)
         {
             clientes cliente = new clientes();
             try
@@ -64,9 +97,13 @@ namespace Datos
             return cliente;
         }
 
+        /// <summary>
+        /// Metodo para crear un cliente en la base de datos
+        /// </summary>
+        /// <param name="cliente"></param>
+        /// <returns></returns>
         public int Crear_cliente(Entidades.clientes cliente)
         {
-            //clientes cliente = (clientes)o;
             int return_id_cliente = 0;
             try
             {
@@ -117,6 +154,43 @@ namespace Datos
                 MessageBox.Show(ex.ToString());
             }
             return return_id_cliente;
+        }
+
+        /// <summary>
+        /// Metodo para asignar la huella a un cliente
+        /// </summary>
+        /// <param name="codigo"></param>
+        /// <param name="xml"></param>
+        /// <returns></returns>
+        public bool Huella_cliente(int codigo, string xml)
+        {
+            try
+            {
+                if (conexion.abrirConexion())
+                {
+                    string comando = "IF EXISTS (SELECT 1 FROM Huellas WHERE cod_cliente=@cod)" +
+                               " BEGIN " +
+                               " UPDATE Huellas SET Huella = @xml WHERE cod_cliente = @cod" +
+                               " END " +
+                               " ELSE " +
+                               " BEGIN " +
+                               " INSERT INTO Huellas VALUES (@cod,0,@xml)" +
+                               " END ";
+                    SqlCommand command = new SqlCommand(comando, conexion.retornarConexion());
+                    command.Parameters.Add("@cod", SqlDbType.Int);
+                    command.Parameters.Add("@xml", SqlDbType.Text);
+                    command.Parameters[0].Value = codigo;
+                    command.Parameters[1].Value = xml;
+                    command.ExecuteScalar();
+                    conexion.cerrarConexion();
+                }
+                    return true;
+            }
+            catch
+            {
+                conexion.cerrarConexion();
+                return false;
+            }
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿using Negocios;
-using System;
+﻿using System;
 using System.Configuration;
 using System.Linq;
 using System.Windows;
@@ -142,7 +141,7 @@ namespace SistemaGym
             //guardamos en la base de datos
             try
             {
-                entidad_membresia em = new entidad_membresia();
+                /*entidad_membresia em = new entidad_membresia();
                 em.COD_CLIENTE = codigo;
                 em.TIPO_MEMBRESIA = servicio;
                 em.FECHA_INICIAL = date_inicio.SelectedDate.Value;
@@ -150,7 +149,7 @@ namespace SistemaGym
                 em.DESCUENTO = float.Parse(txt_descuento.Text);
                 em.COSTO = float.Parse(txt_total.Text);
                 MessageBox.Show("Se añadio la membresia a el cliente correctamente");
-                new Nmembresia().Insertar(em);
+                new Nmembresia().Insertar(em);*/
                 Close();
             }
             catch (Exception ee)
@@ -170,7 +169,7 @@ namespace SistemaGym
             }
             catch (Exception err)
             {
-                MessageBox.Show("seleccione la cantidad de semanas o meses primero");
+                MessageBox.Show("seleccione la cantidad de semanas o meses primero", err.Message);
             }
         }
     }

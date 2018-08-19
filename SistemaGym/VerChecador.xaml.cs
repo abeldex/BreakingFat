@@ -16,7 +16,7 @@ namespace SistemaGym
         PersonalUAU.DigitalPersona objMethods;
         Reader objReader;
         List<PersonalUAU.Clases.Persona> listPerson;
-        string cs = ConfigurationManager.ConnectionStrings["saffron.GYM.GYM2"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["sistemagym"].ConnectionString;
 
         public VerChecador()
         {
@@ -51,7 +51,7 @@ namespace SistemaGym
         {
             //obtenemos las huellas de los clientes y los metemos a la clase de personas
             SqlConnection conexion = new SqlConnection(cs);
-            SqlCommand cmd = new SqlCommand("select dbo.cliente.cod_cliente, Huella, nombre from GYM.Huellas inner join dbo.cliente on GYM.Huellas.cod_cliente = dbo.cliente.cod_cliente", conexion);
+            SqlCommand cmd = new SqlCommand("select dbo.cliente.cod_cliente, Huella, nombre from Huellas inner join dbo.cliente on Huellas.cod_cliente = dbo.cliente.cod_cliente", conexion);
             SqlDataAdapter das = new SqlDataAdapter(cmd);
             DataTable dta = new DataTable();
             das.Fill(dta);
@@ -73,11 +73,11 @@ namespace SistemaGym
 
         private void Listar(string nom)
         {
-            string ConString = ConfigurationManager.ConnectionStrings["saffron.GYM.GYM2"].ConnectionString;
+            string ConString = ConfigurationManager.ConnectionStrings["sistemagymn"].ConnectionString;
             string CmdString = string.Empty;
             using (SqlConnection con = new SqlConnection(ConString))
             {
-                CmdString = "SELECT * FROM GYM.Vistaasistencias WHERE nombre like '%"+nom+"%'";
+                CmdString = "SELECT * FROM Vistaasistencias WHERE nombre like '%"+nom+"%'";
                 SqlCommand cmd = new SqlCommand(CmdString, con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable("Vistaasistencias");

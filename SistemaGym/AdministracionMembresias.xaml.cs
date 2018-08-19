@@ -2,7 +2,6 @@
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Microsoft.Win32;
-using Negocios;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -40,7 +39,7 @@ namespace SistemaGym
         {
             try
             {
-                dg_membresias.ItemsSource = new Nmembresia().ListarMembresias();
+                //dg_membresias.ItemsSource = new Nmembresia().ListarMembresias();
                 dg_membresias.Items.Refresh();
             }
             catch (Exception err)
@@ -66,7 +65,7 @@ namespace SistemaGym
             {
                 try
                 {
-                    new Nmembresia().Eliminar(Convert.ToInt32(Cliente));
+                    //new Nmembresia().Eliminar(Convert.ToInt32(Cliente));
                     Listar();
                 }
                 catch (Exception error)
@@ -112,7 +111,7 @@ namespace SistemaGym
 
             try
             {
-                var pdfWriter = PdfWriter.GetInstance(doc, new FileStream(strFilePath + fileName, FileMode.Create));
+               /* var pdfWriter = PdfWriter.GetInstance(doc, new FileStream(strFilePath + fileName, FileMode.Create));
                 pdfWriter.PageEvent = new ITextEvents();
                 doc.Open();
 
@@ -212,7 +211,7 @@ namespace SistemaGym
                 pdf.Show();
                 pdf.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 pdf.WindowState = WindowState.Maximized;
-
+                */
 
 
             }

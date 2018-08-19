@@ -22,14 +22,14 @@ namespace SistemaGym.Vclientes
     public partial class Perfil
     {
         //int cod_cliente = 4;
-        da_clientes dacli = new da_clientes();
+        Da_clientes dacli = new Da_clientes();
         Entidades.clientes cli = new Entidades.clientes();
 
         public Perfil(object codigo)
         {
             InitializeComponent();
             
-            cli = (Entidades.clientes)dacli.obtener_datos(Convert.ToInt32(codigo));
+            cli = (Entidades.clientes)dacli.Obtener_datos(Convert.ToInt32(codigo));
             //cargamos los datos personales 
             lbl_titulo.Text = cli.CLIENTE_NOMBRE;
             lbl_cod.Text = cli.CLIENTE_COD.ToString();

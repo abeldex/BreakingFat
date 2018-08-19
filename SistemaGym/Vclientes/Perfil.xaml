@@ -9,7 +9,7 @@
         xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"
         xmlns:local="clr-namespace:SistemaGym"                  
         mc:Ignorable="d"
- Title="Perfil del Cliente" Height="600" Width="800" WindowState="Normal"  WindowStyle="SingleBorderWindow" ShowInTaskbar="true" WindowStartupLocation="CenterOwner" >
+ Title="Perfil del Cliente" Height="600" Width="800" WindowState="Normal"  WindowStyle="SingleBorderWindow" ShowInTaskbar="true" WindowStartupLocation="CenterScreen" >
     <controls:MetroWindow.Resources>
         <Style TargetType="TextBlock" BasedOn="{StaticResource MaterialDesignCaptionTextBlock}" x:Key="Caption">
             <Setter Property="Opacity" Value=".68"></Setter>
@@ -119,7 +119,7 @@
                         
                     </Grid>
                 </TabItem>
-                <TabItem Header="Mediciones Avance " x:Name="tab_avance">
+                <TabItem Header="Mediciones" x:Name="tab_avance">
                     <Grid Margin="20 20 20 20">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50"/>
@@ -237,8 +237,7 @@
                     </Grid>
                 </TabItem>
                 <TabItem Header="Pagos de Membresia" x:Name="tab_pagos">
-                    <Grid>
-                    </Grid>
+                   
                 </TabItem>
             </dragablz:TabablzControl>
         </dockablz:Layout>

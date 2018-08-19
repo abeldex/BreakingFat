@@ -40,15 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entidades\entidad_membresia.cs" />
-    <Compile Include="Entidades\entidad_antmedico.cs" />
-    <Compile Include="Entidades\entidad_clientes.cs" />
-    <Compile Include="Entidades\entidad_datosi.cs" />
-    <Compile Include="Negocios\Nmembresia.cs" />
-    <Compile Include="Negocios\Ndatosi.cs" />
-    <Compile Include="Negocios\Nantemedico.cs" />
-    <Compile Include="Negocios\Nclientes.cs" />
-    <Compile Include="Negocios\Ninscripcion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -56,9 +47,6 @@
       <Project>{8840cfc8-7816-47d8-878f-20f7f9b85b9c}</Project>
       <Name>Datos</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

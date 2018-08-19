@@ -105,16 +105,16 @@ namespace PersonalUAU.Identificacion
 
                         if (identifyResult.Score < thresholdScore)
                         {   
-                            List<Datos.membresia> mem = new Negocios.Nmembresia().ListarMembresia(item.id);
+                            //List<Datos.membresia> mem = new Negocios.Nmembresia().ListarMembresia(item.id);
                             //guardar la asistencia en la base de datos
                             try
                             {
                                 //insertamos en la base de datos
-                                string cs = ConfigurationManager.ConnectionStrings["saffron.GYM.GYM2"].ConnectionString;
+                                string cs = ConfigurationManager.ConnectionStrings["sistemagym"].ConnectionString;
 
                                 SqlConnection conexion = new SqlConnection(cs);
                                 conexion.Open();
-                                SqlCommand query = new SqlCommand("INSERT INTO GYM.asistencias VALUES (" + item.id + ", GETDATE())", conexion);
+                                SqlCommand query = new SqlCommand("INSERT INTO asistencias VALUES (" + item.id + ", GETDATE())", conexion);
                                 query.ExecuteNonQuery();
                                 conexion.Close();
                             }
@@ -123,7 +123,7 @@ namespace PersonalUAU.Identificacion
                                 MessageBox.Show(err.Message);
                             }
 
-                            if (mem.Count > 0)
+                            /*if (mem.Count > 0)
                             {
                                 string membresia = "";
                                 DateTime fecha_i = DateTime.Now;
@@ -150,7 +150,7 @@ namespace PersonalUAU.Identificacion
                             else
                             {
                                 SendMessage("Cliente identificado: ", item.Nombre, "Sin Membresia Activa", "", "", "");
-                            }
+                            }*/
                             Thread.Sleep(10000);
                             SendMessage("Coloque el dedo en el checador...", "", "", "", "","");
                             menuPrincipal.Dispatcher.BeginInvoke(new Action(delegate ()

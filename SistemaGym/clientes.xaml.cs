@@ -1,5 +1,4 @@
-﻿using Negocios;
-using System;
+﻿using System;
 using System.Windows;
 using System.Windows.Controls;
 using System.Linq;
@@ -30,7 +29,7 @@ namespace SistemaGym
         Reader objReader;
         string xml;
         List<PersonalUAU.Clases.Persona> listPerson;
-        string cs = ConfigurationManager.ConnectionStrings["saffron.GYM.GYM2"].ConnectionString;
+        string cs = ConfigurationManager.ConnectionStrings["sistemagym"].ConnectionString;
 
         public clientes()
         {
@@ -54,7 +53,8 @@ namespace SistemaGym
         {
             try
             {
-                dg_clientes.ItemsSource = new Nclientes().ListarClientes(dato);
+                dg_clientes.ItemsSource = new Da_clientes().ListarClientes();
+                //dg_clientes.ItemsSource = new Nclientes().ListarClientes(dato);
                 dg_clientes.Items.Refresh();
             }
             catch (Exception err)
@@ -120,7 +120,7 @@ namespace SistemaGym
             try
             {
                 //obtenemos los valores de los texbox y los mandamos a la entidad cliente
-                entidad_clientes c1 = new entidad_clientes
+               /* entidad_clientes c1 = new entidad_clientes
                 {
                     CLIENTE_NOMBRE = txt_nombre.Text,
                     CLIENTE_DIRECCION = txt_direccion.Text,
@@ -144,7 +144,6 @@ namespace SistemaGym
                     registrar_huella(codigo);
                 }*/
               
-                limpiartext();
                 ListarBuscar("");
             }
             catch
@@ -194,7 +193,7 @@ namespace SistemaGym
             {
                 try
                 {
-                    new Nclientes().Eliminar(Convert.ToInt32(Cliente));
+                    //new Nclientes().Eliminar(Convert.ToInt32(Cliente));
                     ListarBuscar("");
                 }
                 catch (Exception error)
@@ -229,21 +228,11 @@ namespace SistemaGym
             btn_actualizar.Visibility = Visibility.Visible;*/
         }
 
-        private void limpiartext()
-        {
-            txt_nombre.Text = "";
-            txt_direccion.Text = "";
-            txt_correo.Text = "";
-            txt_telefono.Text = "";
-            txt_ciudad.Text = "";
-            cmb_sexo.SelectedIndex = -1;
-        }
-
         private void btn_actualizar_Click_1(object sender, RoutedEventArgs e)
         {
             try
             {
-                entidad_clientes ec = new entidad_clientes();
+                /*entidad_clientes ec = new entidad_clientes();
                 ec.CLIENTE_COD_CLIENTE = cliente_act;
                 ec.CLIENTE_NOMBRE = txt_nombre.Text;
                 ec.CLIENTE_CORREO = txt_correo.Text;
@@ -257,7 +246,7 @@ namespace SistemaGym
                 btn_guardar.Visibility = Visibility.Visible;
                 btn_actualizar.Visibility = Visibility.Hidden;
                 ListarBuscar("");
-                limpiartext();
+                limpiartext();*/
                 MessageBox.Show("Cliente Actualizado correctamente");
             }
             catch (Exception err)
@@ -267,12 +256,6 @@ namespace SistemaGym
 
         }
 
-        private void btn_cancelar_Click(object sender, RoutedEventArgs e)
-        {
-            limpiartext();
-            btn_guardar.Visibility = Visibility.Visible;
-            btn_actualizar.Visibility = Visibility.Hidden;
-        }
 
         private void PDF()
         {
@@ -323,7 +306,7 @@ namespace SistemaGym
                     //el Titulo aqui
                     doc.Add(new Paragraph("Reporte de Prueba 1", titleFont));
                     //agregamos los detalles
-                    List<VistaClientes> clis;
+                    /*List<VistaClientes> clis;
                     clis = new Nclientes().ListarClientes("");
                     var orderInfoTable = new PdfPTable(4);
                     orderInfoTable.HorizontalAlignment = 0;
@@ -343,7 +326,7 @@ namespace SistemaGym
                     //Step 6: Closing the Document:
                     doc.Close();
                     writer.Close();
-                    fs.Close();
+                    fs.Close();*/
                 }
                 catch (Exception err)
                 {
@@ -413,7 +396,7 @@ namespace SistemaGym
 
                 //agregamos los datos de la tabla de clientes
                 //agregamos los detalles
-                List<VistaClientes> clis;
+               /* List<VistaClientes> clis;
                 clis = new Nclientes().ListarClientes("");
                 var tblResult = new PdfPTable(4) { TotalWidth = 520f, LockedWidth = true };
                 tblResult.SetWidths(widths);
@@ -454,7 +437,7 @@ namespace SistemaGym
                 pdf.WindowStartupLocation = WindowStartupLocation.CenterScreen;
                 pdf.WindowState = WindowState.Maximized;
 
-                
+                */
 
             }
             catch (Exception ex)

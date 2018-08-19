@@ -7,7 +7,7 @@
          mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
-        Title="Administracion de Clientes" Height="680" Width="820" WindowStartupLocation="CenterScreen" >
+        Title="Administracion de Clientes" Height="680" Width="822.667" WindowStartupLocation="CenterScreen" >
     <Window.Resources>
 
         <ResourceDictionary>
@@ -27,119 +27,63 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
+        <Grid.Background>
+            <ImageBrush TileMode="Tile" Stretch="UniformToFill" ImageSource="/SistemaGym;component/img/bf4.jpg" Opacity="100" />
+        </Grid.Background>
         <!--ESTA ES LA CABECERA -->
-        <!--El espacio para agregar -->
-        <materialDesign:Card Visibility="Hidden" VerticalAlignment="Top" Height="735" Width="250" Margin="0,43,10,0" Padding="10" HorizontalAlignment="Right">
-            <StackPanel>
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}"><Run Text="Nuevo Cliente"/></TextBlock>
-                <TextBox x:Name="txt_nombre" materialDesign:HintAssist.Hint="NOMBRE" HorizontalAlignment="Center" Height="30" Margin="0" TextWrapping="Wrap" Text="" Width="205" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_telefono" materialDesign:HintAssist.Hint="TELEFONO" HorizontalAlignment="Center" Height="30" Margin="0,20,0,0" Width="205" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_correo" materialDesign:HintAssist.Hint="CORREO" HorizontalAlignment="Center" Height="30" Margin="0,20,0,0" Width="205" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_ciudad" materialDesign:HintAssist.Hint="CIUDAD" HorizontalAlignment="Center" Height="30" Margin="0,20,0,0" Width="205" VerticalAlignment="Top"/>
-                <TextBox x:Name="txt_direccion" materialDesign:HintAssist.Hint="DIRECCION" HorizontalAlignment="Center" Height="30" Margin="0,20,0,0" Width="205" VerticalAlignment="Top"/>
-                <ComboBox x:Name="cmb_sexo" Background="White" Cursor="Hand"  materialDesign:HintAssist.Hint="SEXO" Height="30" Margin="0,20,0,0" VerticalAlignment="Top" Width="205">
-                    <ComboBoxItem Content="Femenino" Tag="Femenino"/>
-                    <ComboBoxItem Content="Masculino" Tag="Masculino"/>
-                </ComboBox>
-
-                <Button x:Name="btn_guardar" Content="Registrar" Width="205"  Margin="0,35,0,0" Background="Green" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="btn_guardar_Click" />
-                <Button x:Name="btn_cancelar" Content="Cancelar" Width="205" VerticalAlignment="Top"  Margin="0,10,0,0" Background="DarkOrange" BorderBrush="{x:Null}" Click="btn_cancelar_Click" />
-                <Button x:Name="btn_actualizar" Content="Actualizar" Visibility="Hidden" Width="205"  Margin="7.5,35,7.5,0" Background="Green" VerticalAlignment="Top" BorderBrush="{x:Null}" Click="btn_actualizar_Click_1" />
-            </StackPanel>
-
-        </materialDesign:Card>
         <!--ESTA ES LA CABECERA -->
-        <materialDesign:ColorZone Mode="PrimaryMid" Padding="16">
-
+        <materialDesign:ColorZone Mode="PrimaryDark" Padding="16">
             <DockPanel>
                 <materialDesign:PackIcon DockPanel.Dock="Left" Kind="Face" Height="30" Width="30" VerticalAlignment="Center"/>
-
                 <StackPanel Orientation="Horizontal"
-
                             materialDesign:RippleAssist.IsCentered="True">
-
-
-
-                    <materialDesign:ColorZone Mode="Standard" Padding="8 4 8 4" CornerRadius="2" Panel.ZIndex="1"
-
+                    <materialDesign:ColorZone Mode="Light" Padding="8 4 8 4" CornerRadius="2" Panel.ZIndex="1"
                                    Margin="16 0 0 0"
-
                                    materialDesign:ShadowAssist.ShadowDepth="Depth1">
-
                         <Grid>
-
                             <Grid.ColumnDefinitions>
-
                                 <ColumnDefinition Width="Auto" />
-
                                 <ColumnDefinition Width="*" />
-
                                 <ColumnDefinition Width="Auto" />
-
                             </Grid.ColumnDefinitions>
-
                             <Button Style="{DynamicResource MaterialDesignToolButton}">
-
                                 <materialDesign:PackIcon Kind="Magnify" Opacity=".56" />
-
                             </Button>
-
                             <TextBox x:Name="txt_buscar" Grid.Column="1" Margin="8 0 0 0" materialDesign:HintAssist.Hint="Buscar" 
-
                                      materialDesign:TextFieldAssist.DecorationVisibility="Hidden" BorderThickness="0"
-
                                      MinWidth="200" VerticalAlignment="Center"  KeyUp="txt_buscar_KeyUp"/>
-
                             <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
-
-                                
-
                             </Button>
-
                         </Grid>
-
                     </materialDesign:ColorZone>
-
                     <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
-
                         <!--<materialDesign:PackIcon Kind="Send" />-->
-
                     </Button>
-
-
                 </StackPanel>
-
             </DockPanel>
-
         </materialDesign:ColorZone>
-
+        
         <!--card para los registros -->
-        <materialDesign:Card VerticalAlignment="Top" Height="586" Width="800" Margin="5,43,0,0" Padding="10" HorizontalAlignment="Left">
+        <materialDesign:Card VerticalAlignment="Top" Height="586" Width="800" Margin="5,43,0,0" Padding="10" HorizontalAlignment="Left" Background="WhiteSmoke">
+            
             <Grid Margin="0,0,-0.2,82">
-                <TextBlock Style="{DynamicResource MaterialDesignTitleTextBlock}" HorizontalAlignment="Left" VerticalAlignment="Top"><Run Text="Clientes Registrados"/></TextBlock>
-                <ItemsControl x:Name="dg_clientes" Grid.IsSharedSizeScope="True" Margin="10,32,-9.8,-32">
-
+                
+               
+                <ItemsControl x:Name="dg_clientes" Grid.IsSharedSizeScope="True" >
                     <ItemsControl.ItemTemplate>
-
                         <DataTemplate>
-                        
-                            <Border x:Name="Border" Cursor="Hand" Padding="10" BorderThickness="0 0 0 1" BorderBrush="{DynamicResource MaterialDesignDivider}">
-
+                            <Border x:Name="Border" Cursor="Hand" Padding="10" BorderThickness="0 0 0 1" BorderBrush="LightGray">
                                 <Grid>
-
                                     <Grid.ColumnDefinitions>
-
                                     </Grid.ColumnDefinitions>
-
                                     <StackPanel Margin="8 0 0 0" Grid.Column="1">
-
-                                        <TextBlock FontWeight="Bold" Text="{Binding NOMBRE}" />
-                                        <TextBlock Text="{Binding TELEFONO}"  />
-                                        <TextBlock Text="{Binding CORREO}" />
+                                        <TextBlock FontWeight="Bold" Text="{Binding nombre}" />
+                                        <TextBlock Text="{Binding telefono}"  />
+                                        <TextBlock Text="{Binding correo}" />
                                         <materialDesign:PopupBox PlacementMode="BottomAndAlignRightEdges" StaysOpen="False" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0 -40 0 0">
                                             <StackPanel>
-                                                <Button BorderBrush="{x:Null}" x:Name="btn_perfil" CommandParameter="{Binding COD}" Content="Ver Perfil" Click="btn_perfil_Click"/>
-                                                <Button  Background="Red"  BorderBrush="{x:Null}" x:Name="btn_eliminar" CommandParameter="{Binding COD}" Click="btn_eliminar_Click" Content="Eliminar"/>
+                                                <Button BorderBrush="{x:Null}" x:Name="btn_perfil" CommandParameter="{Binding cod_cliente}" Content="Ver Perfil" Click="btn_perfil_Click"/>
+                                                <Button  Background="Red"  BorderBrush="{x:Null}" x:Name="btn_eliminar" CommandParameter="{Binding cod_cliente}" Click="btn_eliminar_Click" Content="Eliminar"/>
 
 
                                                 <!--<Button Background="Gray" BorderBrush="{x:Null}" x:Name="btn_huella" CommandParameter="{Binding COD}" Click="btn_huella_Click" Content="Huella" />
@@ -231,7 +175,7 @@
             </Grid>
 
         </materialDesign:Card>
-        <Button x:Name="btn_imprimir" Style="{StaticResource MaterialDesignFloatingActionButton}"
+        <Button x:Name="btn_imprimir" Style="{StaticResource MaterialDesignFloatingActionButton}" IsEnabled="False"
             Margin="0,5,23,0" HorizontalAlignment="Right" VerticalAlignment="Top"
             ToolTip="Imprimir" Height="48" Width="48" Click="btn_imprimir_Click" Background="WhiteSmoke"  BorderBrush="{x:Null}" >
             <materialDesign:PackIcon Kind="Printer" Height="24" Width="24"  Foreground="Teal" BorderBrush="{x:Null}" />

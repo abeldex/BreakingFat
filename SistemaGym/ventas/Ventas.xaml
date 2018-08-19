@@ -12,23 +12,23 @@
         xmlns:smtx="clr-namespace:ShowMeTheXAML;assembly=ShowMeTheXAML"
         xmlns:wpf="http://materialdesigninxaml.net/winfx/xaml/themes"     
         mc:Ignorable="d"
- Title="Ventas" Height="768" Width="1360" WindowState="Maximized"  WindowStyle="None" ShowInTaskbar="true" WindowStartupLocation="CenterOwner" >
+ Title="Ventas" Height="768" Width="1240" WindowState="Normal" WindowStyle="ThreeDBorderWindow" ShowInTaskbar="true" WindowStartupLocation="CenterScreen" >
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="110*"/>
-            <ColumnDefinition Width="123*"/>
-            <ColumnDefinition Width="123*"/>
-            <ColumnDefinition Width="488*"/>
-            <ColumnDefinition Width="244*"/>
-            <ColumnDefinition Width="264*"/>
+            <ColumnDefinition Width="110"/>
+            <ColumnDefinition Width="123"/>
+            <ColumnDefinition Width="123"/>
+            <ColumnDefinition Width="488"/>
+            <ColumnDefinition Width="186"/>
+            <ColumnDefinition Width="322"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="73*"/>
+            <RowDefinition Height="73"/>
             <RowDefinition Height="478"/>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="143*"/>
-            <RowDefinition Height="66*"/>
+            <RowDefinition Height="27"/>
+            <RowDefinition Height="116"/>
+            <RowDefinition Height="66"/>
         </Grid.RowDefinitions>
         <!--ESTA ES LA CABECERA -->
         <materialDesign:ColorZone Mode="PrimaryMid" Padding="16" Height="72" Grid.ColumnSpan="6">
@@ -84,7 +84,7 @@
                         </StackPanel>
                     </Button>
 
-                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
+                    <Button Name="btn_buscar_prod" Click="btn_buscar_prod_Click" Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0" Panel.ZIndex="0">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Magnify"/>
                             <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">[F10] Buscar</TextBlock>
@@ -115,7 +115,7 @@
             </DockPanel>
 
         </materialDesign:ColorZone>
-        <DataGrid Cursor="Arrow"  IsReadOnly="True" RowHeaderWidth="0" GridLinesVisibility="None" AutoGenerateColumns="False" x:Name="gridCarroDeCompras" Foreground="#62666A" Margin="0,0,0,0" BorderBrush="Transparent" Background="Transparent" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+        <DataGrid Cursor="Arrow"  IsReadOnly="True" RowHeaderWidth="0" GridLinesVisibility="None" AutoGenerateColumns="False" x:Name="gridCarroDeCompras" Foreground="#62666A" Margin="0,0,116,0" BorderBrush="Transparent" Background="Transparent" Grid.Row="1" Grid.RowSpan="3" Grid.ColumnSpan="6" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
             <DataGrid.Resources>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="Background" Value="White" />
@@ -231,7 +231,7 @@
                 <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Reimprimir Ultimo Ticket</TextBlock>
             </StackPanel>
         </Button>
-        <Button Height="40" Width="245" Margin="0,0,10,0" Grid.Column="5" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Top">
+        <Button Height="40" Width="200" Margin="0,0,10,0" Grid.Column="5" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Cash100"/>
                 <TextBlock Margin="8 0 0 0" VerticalAlignment="Center">Ventas del día</TextBlock>
@@ -253,13 +253,13 @@
             </DockPanel>
 
         </materialDesign:ColorZone>
-        <Button Name="btn_cobrar" Background="White" Foreground="Teal" Height="72" Margin="8 0 0 0" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top">
+        <Button Name="btn_cobrar" Background="White" Foreground="Teal" Height="72" Margin="8 0 0 0" Grid.Column="4" Grid.ColumnSpan="1" Grid.Row="3" HorizontalAlignment="Stretch" VerticalAlignment="Top" Click="btn_cobrar_Click">
             <StackPanel Orientation="Horizontal">
                 <materialDesign:PackIcon Kind="Coin" VerticalAlignment="Center" Height="30" Width="30"/>
                 <TextBlock Margin="5 0 0 0" VerticalAlignment="Center" FontSize="18">[F12] Cobrar</TextBlock>
             </StackPanel>
         </Button>
-        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center"  Grid.Column="5" Grid.Row="3" FontSize="55" Height="73" Margin="66,0" Width="132" >$0.00</TextBlock>
+        <TextBlock VerticalAlignment="top" HorizontalAlignment="left"  Grid.Column="5" Grid.Row="3" FontSize="80" Height="106" Width="190"  >$0.00</TextBlock>
 
     </Grid>
 </controls:MetroWindow>

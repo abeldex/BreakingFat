@@ -1,5 +1,4 @@
-﻿using Negocios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -31,7 +30,7 @@ namespace SistemaGym
         {
             try
             {
-                lb_clientes.ItemsSource = new Nclientes().ListarClientes(txt_buscar.Text);
+               // lb_clientes.ItemsSource = new Nclientes().ListarClientes(txt_buscar.Text);
                 lb_clientes.DisplayMemberPath = "NOMBRE";
                 lb_clientes.SelectedValuePath = "COD";
                 //lb_clientes.
@@ -52,7 +51,7 @@ namespace SistemaGym
         {
             if (lb_clientes.SelectedIndex != -1)
             {
-                Datos.VistaClientes vc = new Datos.VistaClientes();
+               /* Datos.VistaClientes vc = new Datos.VistaClientes();
                 //vc = lb_clientes.SelectedItem;
                 int index = lb_clientes.SelectedIndex; // get the index of selected item 
                 ListBoxItem listitem = (ListBoxItem)(lb_clientes.ItemContainerGenerator.ContainerFromIndex(index));
@@ -60,7 +59,7 @@ namespace SistemaGym
                 //MessageBox.Show(vc.COD.ToString());
                 Membresias mm = new Membresias(vc.COD);
                 mm.Show();
-                Close();
+                Close();*/
             }
             else
             {

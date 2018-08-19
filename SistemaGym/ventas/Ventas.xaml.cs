@@ -22,6 +22,28 @@ namespace SistemaGym.ventas
         public Ventas()
         {
             InitializeComponent();
+            CajaEstado(true);
+            txt_buscar.Focus();
+        }
+
+        private void CajaEstado(bool estado)
+        {
+            if (estado) {
+                AbrirCaja c = new AbrirCaja();
+                c.ShowDialog();
+            }
+                
+        }
+        private void btn_buscar_prod_Click(object sender, RoutedEventArgs e)
+        {
+            ventas.Productos p = new ventas.Productos();
+            p.Show();
+        }
+
+        private void btn_cobrar_Click(object sender, RoutedEventArgs e)
+        {
+            Cobrar cobro = new Cobrar();
+            cobro.ShowDialog();
         }
     }
 }

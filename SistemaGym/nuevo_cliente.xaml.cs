@@ -1,23 +1,10 @@
-﻿using Negocios;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using Datos;
-using Dragablz;
-using PersonalUAU.CapturaHuella;
 using DPUruNet;
-using System.Data.SqlClient;
 
 namespace SistemaGym
 {
@@ -26,12 +13,12 @@ namespace SistemaGym
     /// </summary>
     public partial class nuevo_cliente
     {
+        //objetos para interactuar con el lector de huellas
         PersonalUAU.DigitalPersona objMethods;
         Reader objReader;
         string xml;
         List<PersonalUAU.Clases.Persona> listPerson;
-        string cs = ConfigurationManager.ConnectionStrings["saffron.GYM.GYM2"].ConnectionString;
-
+        //codig que obtendremos el nuevo cliente registrado
         int codigo;
 
         public string Response { get; set; }
@@ -39,6 +26,10 @@ namespace SistemaGym
         public nuevo_cliente()
         {
             InitializeComponent();
+            //inicializar los objetos
+            dp_fecha_inicial.SelectedDate = DateTime.Now;
+            dp_fecha_final.SelectedDate = DateTime.Now.AddMonths(1);
+            lbl_total_pagar.Text = "$" + ConfigurationManager.AppSettings.Get("Mensual");
 
         }
 
@@ -69,7 +60,7 @@ namespace SistemaGym
                     
                 };
                 //registrar en la base de datos
-                codigo = new da_clientes().Crear_cliente(cliente);
+                codigo = new Da_clientes().Crear_cliente(cliente);
                 //MessageBox.Show("Cliente Registrado Correctamente");
                 //CAMBIAR DE PESTAÑA
                 tab_huella.IsSelected = true;
@@ -110,10 +101,7 @@ namespace SistemaGym
 
         private void btn_asignar_huella_Click(object sender, RoutedEventArgs e)
         {
-
             //iniciamos el proceso de captura de la huella
-
-            //AppData data = new AppData(Convert.ToInt32(codigo));
             objMethods = new PersonalUAU.DigitalPersona();
 
             //For one device detected by the computer
@@ -127,27 +115,61 @@ namespace SistemaGym
             //registrar en la base de datos
             try
             {
-                //insertamos en la base de datos
-                SqlConnection conexion = new SqlConnection(cs);
-                conexion.Open();
-                string comando = "IF EXISTS (SELECT 1 FROM GYM.Huellas WHERE cod_cliente=" + codigo + ")" +
-                                " BEGIN " +
-                                " UPDATE GYM.Huellas SET Huella = '" + xml + "' WHERE cod_cliente = '" + codigo + "'" +
-                                " END " +
-                                " ELSE " +
-                                " BEGIN " +
-                                " INSERT INTO GYM.Huellas VALUES (" + codigo + ",0,'" + xml + "')" +
-                                " END ";
-                SqlCommand query = new SqlCommand(comando, conexion);
-                query.ExecuteNonQuery();
-                conexion.Close();
+                bool respuesta = new Da_clientes().Huella_cliente(codigo, xml);
+                //si se registro correctamente la huella pasamos a la pestaña de membresias
+                if (respuesta)
+                {
+                    //realizamos el cambio de pestaña
+                    tab_membresia.IsSelected = true;
+                    tab_membresia.Focus();
+                }
+                    
             }
             catch (Exception err)
             {
                 MessageBox.Show(err.Message);
-            }
-             
+            }   
         }
 
+        private void rb_mensual_Click(object sender, RoutedEventArgs e)
+        {
+            //asignamos el precio a la etiqueta del precio y agregamos 1 mes al control fecha final
+            lbl_total_pagar.Text = "$"+ ConfigurationManager.AppSettings.Get("Mensual");
+            dp_fecha_final.SelectedDate = dp_fecha_inicial.SelectedDate.Value.AddMonths(1);
+           
+        }
+
+        private void rb_semanal_Click(object sender, RoutedEventArgs e)
+        {
+            //asignamos el precio a la etiqueta del precio y agregamos 7 dias al control fecha final
+            lbl_total_pagar.Text = "$" + ConfigurationManager.AppSettings.Get("Semanal");
+            dp_fecha_final.SelectedDate = dp_fecha_inicial.SelectedDate.Value.AddDays(7);
+        }
+
+        private void rb_diario_Click(object sender, RoutedEventArgs e)
+        {
+            //asignamos el precio a la etiqueta del precio y agregamos 1 dia al control fecha final
+            lbl_total_pagar.Text = "$" + ConfigurationManager.AppSettings.Get("Diario");
+            dp_fecha_final.SelectedDate = dp_fecha_inicial.SelectedDate.Value.AddDays(1);
+        }
+
+        private void RegistrarMembresia()
+        {
+            //Obtenemos los valores de los controles y los guardamos en la entidad membresias
+            Entidades.Membresias membresias = new Entidades.Membresias();
+            membresias.cod_cliente = codigo;
+            membresias.costo = float.Parse(lbl_total_pagar.Text.Substring(1));
+            membresias.descuento = float.Parse(txt_descuento.Text);
+            membresias.fecha_inicial = dp_fecha_inicial.SelectedDate.Value;
+            membresias.fecha_final = dp_fecha_final.SelectedDate.Value;
+
+            ventas.Cobrar cobrar = new ventas.Cobrar(lbl_total_pagar.Text.Substring(1), "1");
+            cobrar.ShowDialog();
+        }
+
+        private void btn_cobrar_Click(object sender, RoutedEventArgs e)
+        {
+            RegistrarMembresia();
+        }
     }
 }

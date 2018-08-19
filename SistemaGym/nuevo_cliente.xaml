@@ -8,7 +8,7 @@
         xmlns:dragablz="clr-namespace:Dragablz;assembly=Dragablz"
         xmlns:dockablz="clr-namespace:Dragablz.Dockablz;assembly=Dragablz"    
         mc:Ignorable="d"
-        Title="Registro de Clientes" Height="511.783" Width="790"  WindowStyle="None" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" >
+        Title="Registro de Clientes" Height="511.783" Width="790"  WindowStyle="ToolWindow" ShowInTaskbar="False" WindowStartupLocation="CenterOwner" >
     <controls:MetroWindow.Resources>
         
         <ResourceDictionary>
@@ -26,6 +26,9 @@
             </dragablz:TabablzControl.InterTabController>
             <TabItem Header="Información Personal" x:Name="tab_info">
                 <Grid>
+                    <Grid.Background>
+                        <ImageBrush TileMode="Tile" Stretch="UniformToFill" ImageSource="/SistemaGym;component/img/bf5.jpg" Opacity="0.05" />
+                    </Grid.Background>
                     <GroupBox Header="Datos Personales" HorizontalAlignment="Left" Height="376" Margin="10,10,0,0" VerticalAlignment="Top" Width="378"/>
                     <GroupBox Header="Información Importante" HorizontalAlignment="Left" Height="376" Margin="400,10,0,0" VerticalAlignment="Top" Width="378"/>
                     <TextBox Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text=""  HorizontalAlignment="Left" VerticalAlignment="Top" Margin="20 50 20 0" Width="350" x:Name="txt_nom_new">
@@ -181,9 +184,95 @@
 
             </TabItem>
             <TabItem Header=" Membresia" x:Name="tab_membresia">
-                <Grid Margin="16" VerticalAlignment="Top">
-                   
-                    
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush TileMode="Tile" Stretch="UniformToFill" ImageSource="/SistemaGym;component/img/bf3.jpg" Opacity="100" />
+                    </Grid.Background>
+                    <materialDesign:Card  Background="WhiteSmoke" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="5 5 5 5" >
+                        <Grid>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="200"/>
+                                <ColumnDefinition Width="300"/>
+                                <ColumnDefinition Width="500*"/>
+
+
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="90"/>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="45"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+                                <RowDefinition Height="60"/>
+
+                            </Grid.RowDefinitions>
+
+
+                            <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="left" FontSize="20" FontWeight="Bold">Seleccione una modalidad</TextBlock>
+
+                            <StackPanel Orientation="Horizontal" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" HorizontalAlignment="Left" VerticalAlignment="Center">
+                                <RadioButton Name="rb_mensual" GroupName="tipo" IsChecked="True" Margin="0 0 10 0" Click="rb_mensual_Click">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" >
+                                        <materialDesign:PackIcon Kind="CalendarMultiple" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Grid.Row="0" Grid.Column="0" />
+                                        <TextBlock FontSize="20">Mensual</TextBlock>
+                                    </StackPanel>
+                                </RadioButton>
+                                <RadioButton Name="rb_semanal" GroupName="tipo" Click="rb_semanal_Click">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0 0 20 0">
+                                        <materialDesign:PackIcon Kind="CalendarRange" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Grid.Row="0" Grid.Column="0" />
+                                        <TextBlock FontSize="20">Semanal</TextBlock>
+                                    </StackPanel>
+                                </RadioButton>
+                                <RadioButton Name="rb_diario" GroupName="tipo" Click="rb_diario_Click">
+                                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center"  Margin="0 0 10 0">
+                                        <materialDesign:PackIcon Kind="CalendarToday" HorizontalAlignment="Left" VerticalAlignment="Center" Width="30" Height="30" Grid.Row="0" Grid.Column="0" />
+                                        <TextBlock FontSize="20">Diario</TextBlock>
+                                    </StackPanel>
+                                </RadioButton>
+                            </StackPanel>
+
+                            <DatePicker Name="dp_fecha_inicial" Width="350" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="9" FontSize="20">
+                                <materialDesign:HintAssist.Hint>
+                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 0">
+                                        <TextBlock>Fecha Inicial</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:HintAssist.Hint>
+                            </DatePicker>
+                            <DatePicker Name="dp_fecha_final" Width="350" Style="{StaticResource MaterialDesignFloatingHintDatePicker}" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="9" FontSize="20">
+                                <materialDesign:HintAssist.Hint>
+                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 0">
+                                        <TextBlock>Fecha final</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:HintAssist.Hint>
+                            </DatePicker>
+
+                            <TextBox Name="txt_descuento" Width="350" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Text="0.00" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="5" Grid.Column="1"  FontSize="20">
+                                <materialDesign:HintAssist.Hint>
+                                    <StackPanel Orientation="Horizontal" Margin="0 0 0 0">
+                                        <materialDesign:PackIcon Kind="Sale" Width="25" Height="25" />
+                                        <TextBlock>¿ Aplicar Descuento ?</TextBlock>
+                                    </StackPanel>
+                                </materialDesign:HintAssist.Hint>
+                            </TextBox>
+
+                            <TextBlock Grid.Column="3" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.RowSpan="1">Total a Pagar</TextBlock>
+                            <TextBlock Name="lbl_total_pagar" Grid.Column="3" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Grid.RowSpan="1" Foreground="DarkGreen">$900</TextBlock>
+                            <Button Click="btn_cobrar_Click" Name="btn_cobrar" Style="{DynamicResource MaterialDesignFlatButton}"  Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="3" Grid.RowSpan="1"
+                                 Width="180" Height="100" materialDesign:ShadowAssist.ShadowDepth="Depth3" >
+
+                                <StackPanel Orientation="Horizontal">
+
+                                    <materialDesign:PackIcon Kind="Cash" Width="30" Height="50"/>
+
+                                    <TextBlock Margin="8 0 0 0" VerticalAlignment="Center" FontSize="30">Cobrar</TextBlock>
+
+                                </StackPanel>
+
+                            </Button>
+                        </Grid>
+                    </materialDesign:Card>
                 </Grid>
             </TabItem>
         </dragablz:TabablzControl>

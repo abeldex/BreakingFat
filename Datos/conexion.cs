@@ -17,7 +17,7 @@ namespace Datos
 
         public conexion()
         {
-            sqlConnection = new SqlConnection(@"Server=localhost\SQLEXPRESS;Database=GYM;Trusted_Connection=True;MultipleActiveResultSets=true;");
+            sqlConnection = new SqlConnection(@"Data Source=den1.mssql2.gear.host;Initial Catalog=sistemagym;Persist Security Info=True;User ID=sistemagym;Password=systemagym$2018;");
         }
 
         public bool abrirConexion()
